@@ -7,6 +7,7 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  justify-content: center;
   > ul {
     list-style-type: none;
     display: flex;

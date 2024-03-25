@@ -6,8 +6,8 @@ import UsersContext from "../../contexts/UsersContext";
 
 const StyledHeader = styled.header`
   height: 200px;
-  /* background-color: green; */
   padding: 10px 20px;
+  border-bottom: 1px solid lightgray;
 
   display: flex;
   justify-content: center;
@@ -27,10 +27,11 @@ const StyledHeader = styled.header`
     .posts > div {
       position: absolute;
       top: calc(100% + 10px);
-      right: 0;
-      left: 0;
+      right: calc(50% - 260px);
+      width: fit-content;
       display: flex;
       visibility: hidden;
+      transform: translateY(-10px);
       opacity: 0;
       transition: 0.3s;
       flex-direction: column;
@@ -47,6 +48,7 @@ const StyledHeader = styled.header`
     > div {
       visibility: visible;
       opacity: 1;
+      transform: translateY(0);
     }
   }
   .userBtns {
