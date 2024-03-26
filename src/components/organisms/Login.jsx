@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
 import { createPortal } from "react-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import UsersContext from "../../contexts/UsersContext";
 import styled from "styled-components";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import bcrypt from "bcryptjs"
+import bcrypt from "bcryptjs";
 
 const StyledDiv = styled.div`
   background-color: white;
@@ -13,7 +13,7 @@ const StyledDiv = styled.div`
   height: 400px;
   border-radius: 10px;
   box-shadow: 0 0 20px 5px black;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +60,15 @@ const StyledDiv = styled.div`
   }
   p:last-child {
     margin-top: 10px;
+  }
+  .bi-x-circle {
+    position: absolute;
+    font-size: 2rem;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: black;
+    border-radius: 50%;
   }
 `
 
@@ -135,6 +144,7 @@ const Login = () => {
           failedLogin &&
           <p>Wrong username and/or password</p>
         }
+        <span className="bi bi-x-circle" onClick={() => navigate('/')}></span>
       </StyledDiv>
     </div>,
     document.querySelector('#portal')
