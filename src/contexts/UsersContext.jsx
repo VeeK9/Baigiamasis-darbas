@@ -18,7 +18,7 @@ const reducer = (state, action) => {
 
 const UsersProvider = ({children}) => {
 
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState('');
 
   const [users, setUsers] = useReducer(reducer, []);
 
