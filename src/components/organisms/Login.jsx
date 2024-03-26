@@ -140,11 +140,11 @@ const Login = () => {
           {formik.touched.password && formik.errors.password && <p>{formik.errors.password}</p>}
           <input type="submit"  value="Log In"/>
         </form>
+        <span className="bi bi-x-circle" onClick={() => navigate('/')}></span>
         {
           failedLogin &&
           <p>Wrong username and/or password</p>
         }
-        <span className="bi bi-x-circle" onClick={() => navigate('/')}></span>
       </StyledDiv>
     </div>,
     document.querySelector('#portal')

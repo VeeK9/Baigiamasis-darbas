@@ -9,6 +9,16 @@
       "email": "admin@admin.com",
       "description": "admin of the stride buddies forum",
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+    },
+    {
+      "id": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "role": "user",
+      "username": "useris",
+      "name": "jonas ponas",
+      "password": "$2a$08$Y3H4UIIh4VyYIzOYoh/e1.EwkE6VHXKG6hUJbAX9I/C0Hih6XadTS",
+      "email": "a@a",
+      "description": "User did not provide any additional info about Himself/Herself",
+      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
     }
   ],
   "posts": [

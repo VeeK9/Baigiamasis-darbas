@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../../media/logo.png";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 
@@ -39,6 +39,7 @@ const StyledHeader = styled.header`
       > ul {
         list-style-type: none;
         padding: 0;
+        margin: 0;
         display: flex;
         gap: 10px;
       }
@@ -55,13 +56,14 @@ const StyledHeader = styled.header`
     display: flex;
     gap: 10px;
   }
-  a {
+  a, li.link {
     padding: 10px 20px;
     border-radius: 10px;
     color: black;
     text-decoration: none;
     border: 1px solid lightgray;
     transition: 200ms;
+    cursor: pointer;
     &:hover {
       background-color: lightgray;
     }
@@ -75,6 +77,7 @@ const StyledHeader = styled.header`
 const Header = () => {
 
   const { currentUser, setCurrentUser } = useContext(UsersContext);
+  const navigate = useNavigate();
 
   return (
     <StyledHeader>
@@ -86,11 +89,11 @@ const Header = () => {
         <NavLink to='/posts' className='posts'>Posts
         <div>
           <ul>
-            <li><Link to='/posts/filter'>Runners</Link></li>
-            <li><Link to='/posts/filter'>Races</Link></li>
-            <li><Link to='/posts/filter'>Shoes</Link></li>
-            <li><Link to='/posts/filter'>Watches</Link></li>
-            <li><Link to='/posts/filter'>Random stuff</Link></li>
+            <li className="link" onClick={() => navigate('/')}>Runners</li>
+            <li className="link" onClick={() => navigate('/')}>Races</li>
+            <li className="link" onClick={() => navigate('/')}>Shoes</li>
+            <li className="link" onClick={() => navigate('/')}>Watches</li>
+            <li className="link" onClick={() => navigate('/')}>Random stuff</li>
           </ul>
         </div>
         </NavLink>
