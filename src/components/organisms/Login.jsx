@@ -63,7 +63,7 @@ const StyledDiv = styled.div`
   }
 `
 
-const Register = () => {
+const Login = () => {
 
   const navigate = useNavigate();
   const { users, setCurrentUser } = useContext(UsersContext);
@@ -141,4 +141,4 @@ const Register = () => {
   );
 }
  
-export default Register;
+export default Login;
