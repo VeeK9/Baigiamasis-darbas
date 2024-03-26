@@ -19,15 +19,70 @@
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+    },{
+      "id": "01",
+      "role": "admin",
+      "username": "admin",
+      "name": "Robert",
+      "password": "Hello1",
+      "email": "admin@admin.com",
+      "description": "admin of the stride buddies forum",
+      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+    },
+    {
+      "id": "6c28c76d-adc1-4a60-a337-de1efa16f7c5",
+      "role": "user",
+      "username": "useris",
+      "name": "jonas ponas",
+      "password": "$2a$08$Y3H4UIIh4VyYIzOYoh/e1.EwkE6VHXKG6hUJbAX9I/C0Hih6XadTS",
+      "email": "a@a",
+      "description": "User did not provide any additional info about Himself/Herself",
+      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+    },{
+      "id": "2",
+      "role": "admin",
+      "username": "admin",
+      "name": "Robert",
+      "password": "Hello1",
+      "email": "admin@admin.com",
+      "description": "admin of the stride buddies forum",
+      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+    },
+    {
+      "id": "6c18c72d-adc1-4a60-a337-de1efa16f7c5",
+      "role": "user",
+      "username": "useris",
+      "name": "jonas ponas",
+      "password": "$2a$08$Y3H4UIIh4VyYIzOYoh/e1.EwkE6VHXKG6hUJbAX9I/C0Hih6XadTS",
+      "email": "a@a",
+      "description": "User did not provide any additional info about Himself/Herself",
+      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
     }
   ],
   "posts": [
     {
       "id": "0",
       "title": "Today we celebrate!",
+      "image": "",
+      "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
+      "timestamp": "Mon May 22 2023 18:45",
+      "category": ["shoes", "races"],
+      "authorId": "0"
+    },{
+      "id": "1",
+      "title": "Today we celebrate!",
       "image": "https://bitpay.com/blog/content/images/2022/05/bitcoin-pizza-day.jpg",
       "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
       "timestamp": "Mon May 22 2023 18:45",
+      "category": ["shoes", "races"],
+      "authorId": "0"
+    },{
+      "id": "2",
+      "title": "Today we celebrate!",
+      "image": "https://bitpay.com/blog/content/images/2022/05/bitcoin-pizza-day.jpg",
+      "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
+      "timestamp": "Mon May 22 2023 18:45",
+      "category": ["shoes", "races"],
       "authorId": "0"
     }
   ],

@@ -5,17 +5,27 @@ import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 
 const StyledHeader = styled.header`
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   height: 200px;
   padding: 10px 20px;
   border-bottom: 1px solid lightgray;
+  background-color: white;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  > div {
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
   .logo {
     height: 70%;
     > img {
       height: 100%;
+      margin: 0 auto;
     }
   }
   > nav {
@@ -45,6 +55,19 @@ const StyledHeader = styled.header`
       }
     }
   }
+  .userSide {
+    height: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    > a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      > span {
+      font-size: 1.2rem;
+      }
+    }
+  }
   a.posts:hover {
     > div {
       visibility: visible;
@@ -53,8 +76,8 @@ const StyledHeader = styled.header`
     }
   }
   .userBtns {
-    display: flex;
     gap: 10px;
+    justify-content: flex-end;
   }
   a, li.link {
     padding: 10px 20px;
@@ -62,7 +85,7 @@ const StyledHeader = styled.header`
     color: black;
     text-decoration: none;
     border: 1px solid lightgray;
-    transition: 200ms;
+    transition: 0.2s;
     cursor: pointer;
     &:hover {
       background-color: lightgray;
@@ -101,13 +124,13 @@ const Header = () => {
       </nav>
       {
         currentUser ? 
-        <div>
-          <Link to='/user/:username'><img src={currentUser.avatar} alt={currentUser.username} /></Link>
-          <Link onClick={() => setCurrentUser(false)}>Log out</Link>
+        <div className="userSide">
+          <Link onClick={() => navigate('/user')}>Settings <span className="bi bi-gear-wide-connected"/></Link>
+          <Link onClick={() => setCurrentUser(false)}>Log out <span className="bi bi-box-arrow-right"/></Link>
         </div> :
         <div className="userBtns">
-          <NavLink to='user/register'>Register</NavLink>
-          <NavLink to='user/login'>Log in</NavLink>
+          <NavLink to='/register'>Register</NavLink>
+          <NavLink to='/login'>Log in</NavLink>
         </div>
       }
     </StyledHeader>

@@ -5,38 +5,68 @@ import AddPost from './components/pages/AddPost';
 import UserPosts from './components/pages/UserPosts';
 import OnePost from './components/pages/OnePost';
 import ErrorPage from './components/pages/ErrorPage';
+import Users from './components/pages/Users';
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import Login from './components/organisms/Login';
 import Register from './components/organisms/Register';
 import UserAside from './components/organisms/UserAside';
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import { useContext } from 'react';
+import UsersContext from './contexts/UsersContext';
+import styled from 'styled-components';
+
+const StyledSection = styled.section`
+min-height: calc(100vh - 400px);
+display: flex;
+position: relative;
+top: 200px;
+gap: 10px;
+box-sizing: border-box;
+background-color: #f3f3f3;
+justify-content: ${props => props.$loggedIn ? 'unset' : 'center'};
+width: ${props => props.$loggedIn ? 'calc(100vw - 300px)' : '100%'};
+
+  >aside+* {
+    position: relative;
+    box-sizing: border-box;
+    left: ${props => props.$loggedIn ? '290px' : '0'};
+  }
+  > section {
+    width: ${props => props.loogedIn ? 'calc(100vw - 300px)' : '100%'};
+  }
+  `
 
 const App = () => {
 
+  const { currentUser } = useContext(UsersContext);
   const navigate = useNavigate();
 
   return (
     <>
       <Header />
-      <UserAside />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/posts" element={<Posts />} >
-          <Route path=":id" element={<OnePost />} />
-        </Route>
-        <Route path=":author/posts" element={<UserPosts />} />
-        <Route path=":author/add_new_post" element={<AddPost />} />
-        <Route path='/user'>
-          {/* <Route path=':username' element={loggedInUser ? <UserPage /> : <Navigate to='/user/login' />} /> */}
-          {/* <Route path='admin' element={loggedInUser.role === 'admin' ? <Admin /> : <Navigate to='/user/login' />} /> */}
-          <Route path='login' element={<><Home /><Login /></>} />
-          <Route path='register' element={<><Home /><Register /></>} />
-        </Route>
-        <Route path='*' element={<ErrorPage />} />
-      </Routes>
-      {/* <Routes> */}
-      {/* </Routes> */}
+      <StyledSection $loggedIn={currentUser}>
+        {
+          currentUser &&
+          <UserAside />
+        }
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/posts" element={<Posts />} >
+            <Route path=":id" element={<OnePost />} />
+          </Route>
+          <Route path='/login' element={<><Home /><Login /></>} />
+          <Route path='/register' element={<><Home /><Register /></>} />
+          <Route path='/members' element={<Users />} />
+          <Route path=':user'>
+            <Route path=":user/posts" element={<UserPosts />} />
+            <Route path="new_post" element={currentUser ? <AddPost /> : <Navigate to='/login' />} />
+            {/* <Route path=':username' element={loggedInUser ? <UserPage /> : <Navigate to='/user/login' />} /> */}
+            {/* <Route path='admin' element={loggedInUser.role === 'admin' ? <Admin /> : <Navigate to='/user/login' />} /> */}
+          </Route>
+          <Route path='*' element={<ErrorPage />} />
+        </Routes>
+      </StyledSection>
       <Footer />
     </>
   );

@@ -3,6 +3,10 @@ import ListItem from "../UI/ListItem";
 
 const StyledFooter = styled.footer`
   height: 200px;
+  width: 100%;
+  background-color: #f3f3f3;
+  position: relative;
+  bottom: -200px;
   display: flex;
   flex-direction: column;
   gap: 10px;
