@@ -109,7 +109,7 @@ const Header = () => {
       </div>
       <nav>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/posts' className='posts'>Posts
+        <NavLink to='/posts/all' className='posts'>Posts
         <div>
           <ul>
             <li className="link" onClick={() => navigate('/')}>Runners</li>

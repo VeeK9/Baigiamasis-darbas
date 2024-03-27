@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
+import { useNavigate, Link } from "react-router-dom";
 
 const StyledDiv = styled.div`
   background-color: white;
@@ -40,10 +41,11 @@ const StyledDiv = styled.div`
 const SmallPost = ({post}) => {
 
   const {users} = useContext(UsersContext);
+  const navigate = useNavigate();
 
   return (
     <StyledDiv $image={post.image}>
-      <h3>{post.title}</h3>
+      <h3><Link to={`/posts/${post.id}`}>{post.title}</Link></h3>
       {
         post.image && <img src={post.image} alt="" />
       }

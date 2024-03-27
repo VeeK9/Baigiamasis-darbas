@@ -52,14 +52,15 @@ const App = () => {
         }
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/posts" element={<Posts />} >
+          <Route path="/posts" >
+            <Route path="all" element={<Posts />} />
             <Route path=":id" element={<OnePost />} />
           </Route>
           <Route path='/login' element={<><Home /><Login /></>} />
           <Route path='/register' element={<><Home /><Register /></>} />
           <Route path='/members' element={<Users />} />
           <Route path=':user'>
-            <Route path=":user/posts" element={<UserPosts />} />
+            <Route path="posts" element={<UserPosts />} />
             <Route path="new_post" element={currentUser ? <AddPost /> : <Navigate to='/login' />} />
             {/* <Route path=':username' element={loggedInUser ? <UserPage /> : <Navigate to='/user/login' />} /> */}
             {/* <Route path='admin' element={loggedInUser.role === 'admin' ? <Admin /> : <Navigate to='/user/login' />} /> */}
