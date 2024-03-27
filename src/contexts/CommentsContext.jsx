@@ -6,7 +6,8 @@ const CommentsContext = createContext();
 
 export const CommentsActionTypes = {
   GET_ALL: "fetches all comments on inital load",
-  NEW_COMMENT: "creates a new comment"
+  NEW_COMMENT: "creates a new comment",
+  DELETE: "deletes a specific comment"
 }
 
 const reducer = (state, action) => {
@@ -21,12 +22,12 @@ const reducer = (state, action) => {
           "Content-Type":"application/json"
         },
         body: JSON.stringify(action.comment)
-      })
-      return [...state, action.comment];
+      });
+      return [action.comment, ...state];
       
     case CommentsActionTypes.DELETE:
-      fetch(`http://localhost:8080/comments/${action.commentId}`, { method: "DELETE"});
-      return state.filter(comment => comment.id !== action.commentId);
+      fetch(`http://localhost:8080/comments/${action.commentId}`, {method: "DELETE"});
+      return state.filter(com => com.id !== action.commentId);
 
     default:
       console.error(`No such action: ${action.type}`);
@@ -50,20 +51,13 @@ const CommentsProvider = ({children}) => {
       }))
   }, []);
 
-  useEffect(() => {
-    fetch(`http://localhost:8080/comments`)
-      .then(res => res.json())
-      .then(data => setCurrentPostComments(data.filter(comment => comment.postId === currentPost.id).toReversed()))
-  }, [currentPost, comments]);
-
-  console.log(currentPostComments)
-
   return (
     <CommentsContext.Provider
       value={{
         comments,
         setComments,
-        currentPostComments
+        currentPostComments,
+        setCurrentPostComments
       }}
     >
       {children}

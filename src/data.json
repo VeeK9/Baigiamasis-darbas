@@ -21,49 +21,9 @@
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
     },
     {
-      "id": "01",
-      "role": "admin",
-      "username": "admin",
-      "name": "Robert",
-      "password": "Hello1",
-      "email": "admin@admin.com",
-      "description": "admin of the stride buddies forum",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
-    },
-    {
-      "id": "6c28c76d-adc1-4a60-a337-de1efa16f7c5",
-      "role": "user",
-      "username": "useris",
-      "name": "jonas ponas",
-      "password": "$2a$08$Y3H4UIIh4VyYIzOYoh/e1.EwkE6VHXKG6hUJbAX9I/C0Hih6XadTS",
-      "email": "a@a",
-      "description": "User did not provide any additional info about Himself/Herself",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
-    },
-    {
-      "id": "2",
-      "role": "admin",
-      "username": "admin",
-      "name": "Robert",
-      "password": "Hello1",
-      "email": "admin@admin.com",
-      "description": "admin of the stride buddies forum",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
-    },
-    {
-      "id": "6c18c72d-adc1-4a60-a337-de1efa16f7c5",
-      "role": "user",
-      "username": "useris",
-      "name": "jonas ponas",
-      "password": "$2a$08$Y3H4UIIh4VyYIzOYoh/e1.EwkE6VHXKG6hUJbAX9I/C0Hih6XadTS",
-      "email": "a@a",
-      "description": "User did not provide any additional info about Himself/Herself",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
-    },
-    {
       "id": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
       "role": "user",
-      "username": "ponas",
+      "username": "RemygaTri",
       "name": "Remigijus Trifunovas",
       "password": "$2a$08$WBt5YDBvFEccx8WiSx19L.DGMIokmSd/TQS4NpphhlFGK9QSGmvTy",
       "email": "1@1",
@@ -97,52 +57,6 @@
       "authorId": "0"
     },
     {
-      "id": "2",
-      "title": "Today we celebrate!",
-      "image": "https://bitpay.com/blog/content/images/2022/05/bitcoin-pizza-day.jpg",
-      "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
-      "timestamp": "Mon May 22 2023 18:45",
-      "category": [
-        "miscellaneous",
-        "races"
-      ],
-      "authorId": "0"
-    },
-    {
-      "id": "86c81a10-bcec-4b6b-b252-f9996874f40d",
-      "timestamp": "Wed Mar 27 2024 12:09",
-      "authorId": "0",
-      "title": "hello",
-      "image": "",
-      "post": "My first post on this platform, nice to meet ya'll",
-      "category": [
-        "miscellaneous"
-      ]
-    },
-    {
-      "id": "318e792c-f636-460d-b0b5-62976d8332f4",
-      "timestamp": "Wed Mar 27 2024 12:10",
-      "authorId": "0",
-      "title": "hi",
-      "image": "",
-      "post": "my second post, this is fun!",
-      "category": [
-        "gear",
-        "miscellaneous"
-      ]
-    },
-    {
-      "id": "dfb808a5-8de5-45ab-b15e-399bd19aacfd",
-      "timestamp": "Wed Mar 27 2024 12:12",
-      "authorId": "0",
-      "title": "alio blemba",
-      "image": "",
-      "post": "alio alio, santechniku turim?",
-      "category": [
-        "races"
-      ]
-    },
-    {
       "id": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
       "timestamp": "Wed Mar 27 2024 12:31",
       "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
@@ -166,36 +80,93 @@
         "races",
         "shoes"
       ]
+    },
+    {
+      "id": "37125585-13c9-4498-85b5-51e3bededeb7",
+      "timestamp": "Wed Mar 27 2024 20:41",
+      "authorId": "0",
+      "title": "asdasdasd",
+      "image": "",
+      "post": "asdasdasdasdasd",
+      "category": [
+        "runners"
+      ]
+    },
+    {
+      "id": "1994295f-572e-4023-b193-f743779f2b8f",
+      "timestamp": "Wed Mar 27 2024 21:22",
+      "authorId": "0",
+      "title": "naujas postas",
+      "image": "",
+      "post": "visiskai naujas postas",
+      "category": [
+        "miscellaneous"
+      ]
     }
   ],
   "comments": [
     {
-      "id": "0",
-      "text": "Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis?",
-      "timestamp": "Sun Feb 18 2024 23:52",
+      "id": "a1f41211-8006-44f4-b2ed-5c207169c713",
+      "text": "cia pirmas postas?",
       "userId": "0",
+      "timestamp": "Wed Mar 27 2024 21:21",
+      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7"
+    },
+    {
+      "id": "1cb1b138-29cf-4e3d-bf49-bf937e77cb3f",
+      "text": "ar kazkelintas jau?",
+      "userId": "0",
+      "timestamp": "Wed Mar 27 2024 21:21",
+      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7"
+    },
+    {
+      "id": "c8ecaa46-b801-4bcf-a350-efcbb4e339d8",
+      "text": "asdasdqweqweqwe",
+      "userId": "0",
+      "timestamp": "Wed Mar 27 2024 21:22",
+      "postId": "1994295f-572e-4023-b193-f743779f2b8f"
+    },
+    {
+      "id": "6c480846-dda8-4570-9a1e-e2cee2aef98e",
+      "text": "safiwopejfpweqwefvebverfqwefwdfasdfwerawer",
+      "userId": "0",
+      "timestamp": "Wed Mar 27 2024 21:23",
       "postId": "0"
     },
     {
-      "id": "ad799607-1a46-4403-ab21-d5b97f6ae7d0",
-      "text": "kas cia per briedas parasytas?",
+      "id": "6d2acd5f-2651-475a-9c9e-cbb0d866c5e3",
+      "text": "dsfgergsergserg",
       "userId": "0",
-      "timestamp": "Wed Mar 27 2024 15:38",
-      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7"
+      "timestamp": "Wed Mar 27 2024 21:23",
+      "postId": "0"
     },
     {
-      "id": "ad641047-b835-4582-b9da-dd80334bcd4e",
-      "text": "kas cia sneka?",
+      "id": "e4d4afaa-73cf-45b0-b8ec-96b3ed6fb315",
+      "text": "12345678987654321",
+      "userId": "0",
+      "timestamp": "Wed Mar 27 2024 21:23",
+      "postId": "0"
+    },
+    {
+      "id": "65dd630e-aad9-468d-95f7-859786ca263b",
+      "text": "asdqweqweqwe",
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
-      "timestamp": "Wed Mar 27 2024 19:15",
-      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7"
+      "timestamp": "Wed Mar 27 2024 21:25",
+      "postId": "0"
     },
     {
-      "id": "59d91338-57e1-4653-9cc9-7551b963cdc9",
-      "text": "o kas cia vyksta dabar?!",
-      "userId": "0",
-      "timestamp": "Wed Mar 27 2024 19:19",
-      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7"
+      "id": "bf9ec2e6-bf05-4175-9701-76fb9cb196c1",
+      "text": "12345678987654321",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Wed Mar 27 2024 21:25",
+      "postId": "0"
+    },
+    {
+      "id": "576addf8-2568-49a7-ab4d-4fe33ae70151",
+      "text": "asdasdqwe123",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Wed Mar 27 2024 21:26",
+      "postId": "0"
     }
   ]
 }

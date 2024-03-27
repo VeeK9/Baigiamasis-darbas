@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
@@ -58,11 +58,15 @@ const OnePost = () => {
 
   const { id } = useParams();
   const {currentUser, users} = useContext(UsersContext);
-  const {posts} = useContext(PostsContext);
+  const {posts, currentPost} = useContext(PostsContext);
   const {comments, setComments, currentPostComments, setCurrentPostComments} = useContext(CommentsContext);
   
-  const post = posts.find(post => post.id === id);
-  const author = users.find(user => user.id === post.authorId);
+  const post = posts?.find(post => post.id === id);
+  const author = users.find(user => user.id === post?.authorId);
+
+  useEffect(()=>{
+    setCurrentPostComments(comments.filter(com => com.postId === currentPost.id))
+  },[currentPost, comments])
 
 
   const formik = useFormik({
@@ -94,7 +98,7 @@ const OnePost = () => {
   return (
     <StyledSection>
       {
-        posts.length ?
+        posts.length && post ?
         <>
           <div className="post">
             <p>by: {author?.username}</p>
@@ -102,18 +106,7 @@ const OnePost = () => {
             <p>{post.post}</p>
             {post.image && <img src={post.image} alt="" />}
           </div>
-          <div>
-            {
-              currentPostComments.map(comment => 
-                <Comment
-                  key={comment.id}
-                  comment={comment}
-                  postId={post.id}
-                />
-              )
-            }
-          </div>
-          <div>
+          <div className="addComment">
             {
               currentUser &&
               <form onSubmit={formik.handleSubmit}>
@@ -129,6 +122,17 @@ const OnePost = () => {
                   formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>
                 }
               </form>
+            }
+          </div>
+          <div className="comments">
+            {
+              currentPostComments.map(comment => 
+                <Comment
+                  key={comment.id}
+                  comment={comment}
+                  postId={post.id}
+                />
+              )
             }
           </div>
         </>

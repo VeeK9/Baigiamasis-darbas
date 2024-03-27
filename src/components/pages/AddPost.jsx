@@ -77,7 +77,6 @@ const AddPost = () => {
         type: PostsActionTypes.NEW_POST,
         data: newPost
       })
-      console.log(values)
       navigate('/posts/all')
     },
     validationSchema: Yup.object({
