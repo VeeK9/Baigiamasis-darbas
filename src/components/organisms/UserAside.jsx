@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import PostsContext from "../../contexts/PostsContext";
 
 const StyledAside = styled.aside`
@@ -59,17 +59,18 @@ background-color: #f3f3f3;
 span {
   text-decoration: underline;
   font-weight: 700;
+  cursor: pointer;
 }
 a {
 color: black;
 text-decoration: none;
 padding: 5px 10px;
 border: 1px solid lightgray;
-border-radius: 15px;
+border-radius: 10px;
 transition: 0.2s;
+margin-block: 10px 20px;
 
 &:hover {
-  color: gray;
   background-color: lightgray;
 }
 }
@@ -79,6 +80,7 @@ const UserAside = () => {
 
   const {currentUser, users} = useContext(UsersContext);
   const {posts, userPosts} = useContext(PostsContext);
+  const navigate = useNavigate();
 
   return (
     <StyledAside>
@@ -89,7 +91,7 @@ const UserAside = () => {
           userPosts.length>0 ?
           <div>
             <p>
-              You last posted on: {`\n`} <span>{userPosts[0].timestamp}</span>
+              You last posted on: {`\n`} <span onClick={() => navigate(`post/${userPosts[0].id}`)}>{userPosts[0].timestamp}</span>
             </p>
             <p>
               You have posted {userPosts.length} times,{'\n'}since you registered.
@@ -103,6 +105,7 @@ const UserAside = () => {
         <p>Last post on the site:</p>
         <div
           className="lastPost"
+          onClick={() => navigate(`post/${posts[0].id}`)}
         >
           {
             posts[0].image &&

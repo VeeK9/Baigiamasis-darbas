@@ -42,7 +42,8 @@
         "runners",
         "races"
       ],
-      "authorId": "0"
+      "authorId": "0",
+      "edited":false
     },
     {
       "id": "1",
@@ -54,7 +55,8 @@
         "shoes",
         "watches"
       ],
-      "authorId": "0"
+      "authorId": "0",
+      "edited":false
     },
     {
       "id": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
@@ -66,7 +68,8 @@
       "category": [
         "miscellaneous",
         "runners"
-      ]
+      ],
+      "edited":false
     },
     {
       "id": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
@@ -79,7 +82,8 @@
         "runners",
         "races",
         "shoes"
-      ]
+      ],
+      "edited":false
     },
     {
       "id": "37125585-13c9-4498-85b5-51e3bededeb7",
@@ -90,7 +94,8 @@
       "post": "asdasdasdasdasd",
       "category": [
         "runners"
-      ]
+      ],
+      "edited":false
     },
     {
       "id": "1994295f-572e-4023-b193-f743779f2b8f",
@@ -101,7 +106,8 @@
       "post": "visiskai naujas postas",
       "category": [
         "miscellaneous"
-      ]
+      ],
+      "edited":false
     }
   ],
   "comments": [
@@ -110,63 +116,80 @@
       "text": "cia pirmas postas?",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:21",
-      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7"
+      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
+      "edited":false
     },
     {
       "id": "1cb1b138-29cf-4e3d-bf49-bf937e77cb3f",
       "text": "ar kazkelintas jau?",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:21",
-      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7"
+      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
+      "edited":false
     },
     {
       "id": "c8ecaa46-b801-4bcf-a350-efcbb4e339d8",
       "text": "asdasdqweqweqwe",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:22",
-      "postId": "1994295f-572e-4023-b193-f743779f2b8f"
+      "postId": "1994295f-572e-4023-b193-f743779f2b8f",
+      "edited":false
     },
     {
       "id": "6c480846-dda8-4570-9a1e-e2cee2aef98e",
       "text": "safiwopejfpweqwefvebverfqwefwdfasdfwerawer",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
-      "postId": "0"
+      "postId": "0",
+      "edited":false
     },
     {
       "id": "6d2acd5f-2651-475a-9c9e-cbb0d866c5e3",
       "text": "dsfgergsergserg",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
-      "postId": "0"
+      "postId": "0",
+      "edited":false
     },
     {
       "id": "e4d4afaa-73cf-45b0-b8ec-96b3ed6fb315",
       "text": "12345678987654321",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
-      "postId": "0"
+      "postId": "0",
+      "edited":false
     },
     {
       "id": "65dd630e-aad9-468d-95f7-859786ca263b",
       "text": "asdqweqweqwe",
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:25",
-      "postId": "0"
+      "postId": "0",
+      "edited":false
     },
     {
       "id": "bf9ec2e6-bf05-4175-9701-76fb9cb196c1",
       "text": "12345678987654321",
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:25",
-      "postId": "0"
+      "postId": "0",
+      "edited":false
     },
     {
       "id": "576addf8-2568-49a7-ab4d-4fe33ae70151",
       "text": "asdasdqwe123",
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:26",
-      "postId": "0"
+      "postId": "0",
+      "edited":false
+    },
+    {
+      "id": "db3f1457-1208-4b49-8948-d1159c98da47",
+      "text": "asdasdasdasd",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Wed Mar 27 2024 21:34",
+      "postId": "1994295f-572e-4023-b193-f743779f2b8f",
+      "edited":false
     }
   ]
 }

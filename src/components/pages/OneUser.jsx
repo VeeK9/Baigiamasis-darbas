@@ -2,23 +2,18 @@ import { useContext } from "react";
 import styled from "styled-components";
 import PostsContext from "../../contexts/PostsContext";
 import UsersContext from "../../contexts/UsersContext";
-import { useNavigate } from "react-router-dom";
 
-const StyledDiv = styled.div`
-  background-color: white;
-  border: 1px solid lightgray;
-  padding: 20px;
+const StyledSection = styled.section`
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  width: 300px;
-  height: 300px;
-  justify-content: center;
   align-items: center;
+  padding-block: 30px;
   > * {
-    margin: 0;
+    max-width: 950px;
   }
-  img {
+  > img {
     border-radius: 50%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -27,23 +22,24 @@ const StyledDiv = styled.div`
   }
 `
 
-const SmallUser = ({user}) => {
+const OneUser = ({pathname}) => {
 
   const {posts} = useContext(PostsContext);
-  const {currentUser} = useContext(UsersContext);
-  const navigate = useNavigate();
+  const {users, currentUser} = useContext(UsersContext);
+
+  const user = users.find(user => user.username === pathname.slice(9))
 
   return (
-    <StyledDiv>
+    <StyledSection>
       <h2>{user.username}</h2>
       {
         currentUser &&
-        <h4>{user.name}</h4>
+        <p>{user.name}</p>
       }
-      <img src={user.avatar} alt={user.username} onClick={() => navigate(`/members/${user.username}`)}/>
+      <img src={user.avatar} alt={user.username} />
       <p>Posts: {posts && posts.filter(post => post.authorId === user.id).length}</p>
-    </StyledDiv>
+    </StyledSection>
   );
 }
  
-export default SmallUser;
+export default OneUser;

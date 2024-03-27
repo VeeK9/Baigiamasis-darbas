@@ -128,7 +128,7 @@ const Header = () => {
             <li><Link to={'posts/miscellaneous'}>Miscellaneous</Link></li>
           </ul>
         </div>
-        <NavLink to='/members'>Members</NavLink>
+        <NavLink to='/members/all'>Members</NavLink>
         {
           currentUser &&
           <NavLink to={`${currentUser.username}/posts`}>My Posts</NavLink>

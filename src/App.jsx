@@ -6,6 +6,7 @@ import UserPosts from './components/pages/UserPosts';
 import OnePost from './components/pages/OnePost';
 import ErrorPage from './components/pages/ErrorPage';
 import Users from './components/pages/Users';
+import OneUser from './components/pages/OneUser';
 import Footer from './components/organisms/Footer';
 import Header from './components/organisms/Header';
 import Login from './components/organisms/Login';
@@ -53,14 +54,20 @@ const App = () => {
         }
         <Routes>
           <Route index element={<Home />} />
+
           <Route path="/posts" element={<Posts pathname={location.pathname}/>}>
-            {/* <Route path="all"  /> */}
             <Route path=":category" element={<Posts />} />
           </Route>
+
           <Route path='post/:id' element={<OnePost />}/>
           <Route path='/login' element={<><Home /><Login /></>} />
           <Route path='/register' element={<><Home /><Register /></>} />
-          <Route path='/members' element={<Users />} />
+
+          <Route path='/members'>
+            <Route path='all' element={<Users />} />
+            <Route path=':username' element={<OneUser pathname={location.pathname}/>} />
+          </Route>
+            
           <Route path=':user'>
             <Route path="posts" element={currentUser ? <UserPosts /> : <Navigate to='/login' />}/>
             <Route path="new_post" element={currentUser ? <AddPost /> : <Navigate to='/login' />} />
