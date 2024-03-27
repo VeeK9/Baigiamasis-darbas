@@ -45,7 +45,7 @@ const SmallPost = ({post}) => {
 
   return (
     <StyledDiv $image={post.image}>
-      <h3><Link to={`/posts/${post.id}`}>{post.title}</Link></h3>
+      <h3><Link to={`/post/${post.id}`}>{post.title}</Link></h3>
       {
         post.image && <img src={post.image} alt="" />
       }

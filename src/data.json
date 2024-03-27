@@ -19,7 +19,8 @@
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
-    },{
+    },
+    {
       "id": "01",
       "role": "admin",
       "username": "admin",
@@ -38,7 +39,8 @@
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
-    },{
+    },
+    {
       "id": "2",
       "role": "admin",
       "username": "admin",
@@ -66,24 +68,69 @@
       "image": "",
       "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
       "timestamp": "Mon May 22 2023 18:45",
-      "category": ["shoes", "races"],
+      "category": [
+        "runners",
+        "races"
+      ],
       "authorId": "0"
-    },{
+    },
+    {
       "id": "1",
       "title": "Today we celebrate!",
       "image": "https://bitpay.com/blog/content/images/2022/05/bitcoin-pizza-day.jpg",
       "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
       "timestamp": "Mon May 22 2023 18:45",
-      "category": ["shoes", "races"],
+      "category": [
+        "shoes",
+        "watches"
+      ],
       "authorId": "0"
-    },{
+    },
+    {
       "id": "2",
       "title": "Today we celebrate!",
       "image": "https://bitpay.com/blog/content/images/2022/05/bitcoin-pizza-day.jpg",
       "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
       "timestamp": "Mon May 22 2023 18:45",
-      "category": ["shoes", "races"],
+      "category": [
+        "miscellaneous",
+        "races"
+      ],
       "authorId": "0"
+    },
+    {
+      "id": "86c81a10-bcec-4b6b-b252-f9996874f40d",
+      "timestamp": "Wed Mar 27 2024 12:09",
+      "authorId": "0",
+      "title": "hello",
+      "image": "",
+      "post": "My first post on this platform, nice to meet ya'll",
+      "category": [
+        "miscellaneous"
+      ]
+    },
+    {
+      "id": "318e792c-f636-460d-b0b5-62976d8332f4",
+      "timestamp": "Wed Mar 27 2024 12:10",
+      "authorId": "0",
+      "title": "hi",
+      "image": "",
+      "post": "my second post, this is fun!",
+      "category": [
+        "gear",
+        "miscellaneous"
+      ]
+    },
+    {
+      "id": "dfb808a5-8de5-45ab-b15e-399bd19aacfd",
+      "timestamp": "Wed Mar 27 2024 12:12",
+      "authorId": "0",
+      "title": "alio blemba",
+      "image": "",
+      "post": "alio alio, santechniku turim?",
+      "category": [
+        "races"
+      ]
     }
   ],
   "comments": [

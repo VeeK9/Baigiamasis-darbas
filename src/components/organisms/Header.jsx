@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../../media/logo.png";
-import { NavLink, Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 
@@ -34,14 +34,13 @@ const StyledHeader = styled.header`
     flex-grow: 1;
     gap: 10px;
     position: relative;
-    .posts > div {
+    .posts + div {
       position: absolute;
       top: calc(100% + 10px);
       right: calc(50% - 260px);
       width: fit-content;
       display: flex;
       visibility: hidden;
-      transform: translateY(-10px);
       opacity: 0;
       transition: 0.3s;
       flex-direction: column;
@@ -68,11 +67,11 @@ const StyledHeader = styled.header`
       }
     }
   }
-  a.posts:hover {
-    > div {
+  a.active {
+    + div {
       visibility: visible;
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(10px);
     }
   }
   .userBtns {
@@ -110,16 +109,25 @@ const Header = () => {
       <nav>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/posts/all' className='posts'>Posts
-        <div>
+        {/* <div>
           <ul>
-            <li className="link" onClick={() => navigate('/')}>Runners</li>
-            <li className="link" onClick={() => navigate('/')}>Races</li>
+            <li className="link" onClick={() => <Navigate to='runners'/>}>Runners</li>
+            <li className="link" onClick={() => navigate('races')}>Races</li>
             <li className="link" onClick={() => navigate('/')}>Shoes</li>
             <li className="link" onClick={() => navigate('/')}>Watches</li>
             <li className="link" onClick={() => navigate('/')}>Random stuff</li>
           </ul>
-        </div>
+        </div> */}
         </NavLink>
+        <div>
+          <ul>
+            <li><Link to={'posts/runners'}>Runners</Link></li>
+            <li><Link to={'posts/races'}>Races</Link></li>
+            <li><Link to={'posts/shoes'}>Shoes</Link></li>
+            <li><Link to={'posts/gear'}>Gear</Link></li>
+            <li><Link to={'posts/miscellaneous'}>Miscellaneous</Link></li>
+          </ul>
+        </div>
         <NavLink to='/members'>Members</NavLink>
       </nav>
       {

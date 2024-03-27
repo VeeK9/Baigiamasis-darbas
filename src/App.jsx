@@ -11,7 +11,7 @@ import Header from './components/organisms/Header';
 import Login from './components/organisms/Login';
 import Register from './components/organisms/Register';
 import UserAside from './components/organisms/UserAside';
-import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import { Route, Routes, useNavigate, Navigate, useLocation } from "react-router-dom";
 import { useContext } from 'react';
 import UsersContext from './contexts/UsersContext';
 import styled from 'styled-components';
@@ -41,6 +41,7 @@ const App = () => {
 
   const { currentUser } = useContext(UsersContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <>
@@ -52,10 +53,11 @@ const App = () => {
         }
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/posts" >
-            <Route path="all" element={<Posts />} />
-            <Route path=":id" element={<OnePost />} />
+          <Route path="/posts" element={<Posts pathname={location.pathname}/>}>
+            {/* <Route path="all"  /> */}
+            <Route path=":category" element={<Posts />} />
           </Route>
+          <Route path='post/:id' element={<OnePost />}/>
           <Route path='/login' element={<><Home /><Login /></>} />
           <Route path='/register' element={<><Home /><Register /></>} />
           <Route path='/members' element={<Users />} />

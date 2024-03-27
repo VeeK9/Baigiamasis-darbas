@@ -21,7 +21,7 @@ const reducer = (state, action) => {
         },
         body: JSON.stringify(action.data)
       })
-      return [...state, action.data];
+      return [action.data, ...state];
       
     default:
       console.error(`No such action: ${action.type}`);
@@ -40,7 +40,7 @@ const PostsProvider = ({children}) => {
       .then(res => res.json())
       .then(data => setPosts({
         type: PostsActionTypes.GET_ALL,
-        data: data
+        data: data.toReversed()
       }))
   }, []);
 
