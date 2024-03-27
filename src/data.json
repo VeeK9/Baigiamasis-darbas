@@ -15,7 +15,7 @@
       "role": "user",
       "username": "useris",
       "name": "jonas ponas",
-      "password": "$2a$08$Y3H4UIIh4VyYIzOYoh/e1.EwkE6VHXKG6hUJbAX9I/C0Hih6XadTS",
+      "password": "Slaptas1",
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
@@ -59,6 +59,16 @@
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+    },
+    {
+      "id": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
+      "role": "user",
+      "username": "ponas",
+      "name": "Remigijus Trifunovas",
+      "password": "$2a$08$WBt5YDBvFEccx8WiSx19L.DGMIokmSd/TQS4NpphhlFGK9QSGmvTy",
+      "email": "1@1",
+      "description": "pradedantysis begikas is kursenu",
+      "avatar": "https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Running/Articles/Running+Mojo/Running+Mojo/happy+runner-carousel.jpg"
     }
   ],
   "posts": [
@@ -130,6 +140,31 @@
       "post": "alio alio, santechniku turim?",
       "category": [
         "races"
+      ]
+    },
+    {
+      "id": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
+      "timestamp": "Wed Mar 27 2024 12:31",
+      "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "title": "pirmas",
+      "image": "https://cdn.sanity.io/images/eztzxh9q/production/2a9a480f3d31a159934d12af98378c4a9c617cbd-2121x1414.jpg?w=3840&q=75&fit=clip&auto=format",
+      "post": "as pirma karta rasau cia posta, kaip jum visiem sekasi?",
+      "category": [
+        "miscellaneous",
+        "runners"
+      ]
+    },
+    {
+      "id": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
+      "timestamp": "Wed Mar 27 2024 12:44",
+      "authorId": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
+      "title": "Nesamoningas postas",
+      "image": "https://hips.hearstapps.com/runnersworld-uk/i/16122/group_of_runners.jpg",
+      "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
+      "category": [
+        "runners",
+        "races",
+        "shoes"
       ]
     }
   ],

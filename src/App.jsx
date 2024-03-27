@@ -62,7 +62,7 @@ const App = () => {
           <Route path='/register' element={<><Home /><Register /></>} />
           <Route path='/members' element={<Users />} />
           <Route path=':user'>
-            <Route path="posts" element={<UserPosts />} />
+            <Route path="posts" element={currentUser ? <UserPosts /> : <Navigate to='/login' />}/>
             <Route path="new_post" element={currentUser ? <AddPost /> : <Navigate to='/login' />} />
             {/* <Route path=':username' element={loggedInUser ? <UserPage /> : <Navigate to='/user/login' />} /> */}
             {/* <Route path='admin' element={loggedInUser.role === 'admin' ? <Admin /> : <Navigate to='/user/login' />} /> */}

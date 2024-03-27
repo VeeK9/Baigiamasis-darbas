@@ -129,6 +129,10 @@ const Header = () => {
           </ul>
         </div>
         <NavLink to='/members'>Members</NavLink>
+        {
+          currentUser &&
+          <NavLink to={`${currentUser.username}/posts`}>My Posts</NavLink>
+        }
       </nav>
       {
         currentUser ? 
