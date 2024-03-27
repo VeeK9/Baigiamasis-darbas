@@ -32,7 +32,8 @@ const reducer = (state, action) => {
 const PostsProvider = ({children}) => {
 
   const [posts, setPosts] = useReducer(reducer, []);
-  const [userPosts, setUserPosts] = useState([]);
+  const [userPosts, setUserPosts] = useState('');
+  const [currentPost, setCurrentPost] = useState([]);
   const {currentUser} = useContext(UsersContext);
 
   useEffect(() => {
@@ -55,7 +56,9 @@ const PostsProvider = ({children}) => {
       value={{
         posts,
         setPosts,
-        userPosts
+        userPosts,
+        setCurrentPost,
+        currentPost
       }}
     >
       {children}

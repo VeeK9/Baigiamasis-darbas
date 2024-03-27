@@ -171,10 +171,31 @@
   "comments": [
     {
       "id": "0",
-      "post": "Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis?",
+      "text": "Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis?",
       "timestamp": "Sun Feb 18 2024 23:52",
       "userId": "0",
       "postId": "0"
+    },
+    {
+      "id": "ad799607-1a46-4403-ab21-d5b97f6ae7d0",
+      "text": "kas cia per briedas parasytas?",
+      "userId": "0",
+      "timestamp": "Wed Mar 27 2024 15:38",
+      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7"
+    },
+    {
+      "id": "ad641047-b835-4582-b9da-dd80334bcd4e",
+      "text": "kas cia sneka?",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Wed Mar 27 2024 19:15",
+      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7"
+    },
+    {
+      "id": "59d91338-57e1-4653-9cc9-7551b963cdc9",
+      "text": "o kas cia vyksta dabar?!",
+      "userId": "0",
+      "timestamp": "Wed Mar 27 2024 19:19",
+      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7"
     }
   ]
 }

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 import PostsContext from "../../contexts/PostsContext";
 import SmallPost from "../organisms/SmallPost";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const StyledSection = styled.section`
   background-color: #f3f3f3;
@@ -18,6 +18,7 @@ const StyledSection = styled.section`
 const Posts = ({pathname}) => {
 
   const {posts} = useContext(PostsContext);
+  
   let category;
   if(pathname){
     category = pathname.slice(7);

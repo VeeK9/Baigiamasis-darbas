@@ -2,6 +2,8 @@ import { useContext } from "react";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
 import { useNavigate, Link } from "react-router-dom";
+import PostsContext from "../../contexts/PostsContext";
+import CommentsContext from "../../contexts/CommentsContext";
 
 const StyledDiv = styled.div`
   background-color: white;
@@ -41,11 +43,17 @@ const StyledDiv = styled.div`
 const SmallPost = ({post}) => {
 
   const {users} = useContext(UsersContext);
+  const {setCurrentPost} = useContext(PostsContext);
+  const {comments, currentPostComments, setCurrentPostComments} = useContext(CommentsContext);
   const navigate = useNavigate();
 
   return (
     <StyledDiv $image={post.image}>
-      <h3><Link to={`/post/${post.id}`}>{post.title}</Link></h3>
+      <h3>
+        <Link to={`/post/${post.id}`}
+        onClick={() => setCurrentPost(post)}
+        >{post.title}</Link>
+      </h3>
       {
         post.image && <img src={post.image} alt="" />
       }
