@@ -5,7 +5,7 @@
       "role": "admin",
       "username": "admin",
       "name": "Annabelle",
-      "password": "Hello1",
+      "password": "$2a$08$YnhLnSKbweh8df2l1z3i5.wAMQHorWBjbV5recMH.3Q3ym9Gv7C2q",
       "email": "admin@admin.com",
       "description": "admin of the stride buddies forum",
       "avatar": "https://t3.ftcdn.net/jpg/06/15/59/88/360_F_615598844_BxbUfItLjm1yDdtpy5I5MXA0dAg1HzNX.jpg",
@@ -19,9 +19,9 @@
     {
       "id": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "role": "user",
-      "username": "useris",
-      "name": "jonas ponas",
-      "password": "Slaptas1",
+      "username": "jonce",
+      "name": "Jonas Nesakysiu",
+      "password": "$2a$08$CG7JhIrcT5YXSoTDr12v3eE9xmCAd.uMQ56IRViYs7bVUQnMHt5Xy",
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://le-cdn.hibuwebsites.com/96d6b0e88d554b9ebc4c0b534706829d/dms3rep/multi/opt/generic-profile-m-lg-396w.png",
@@ -33,9 +33,9 @@
     {
       "id": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
       "role": "user",
-      "username": "RemygaTri",
-      "name": "Remigijus Trifunovas",
-      "password": "$2a$08$WBt5YDBvFEccx8WiSx19L.DGMIokmSd/TQS4NpphhlFGK9QSGmvTy",
+      "username": "romatri",
+      "name": "Romualda Trinkuniene",
+      "password": "$2a$08$r/XLhDLRAUZtev3q9OD4Zua4HaE1Cwnp7GONcVISqmOVvXuNNinFC",
       "email": "1@1",
       "description": "pradedantysis begikas is kursenu",
       "avatar": "https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Running/Articles/Running+Mojo/Running+Mojo/happy+runner-carousel.jpg",
@@ -47,9 +47,9 @@
     {
       "id": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
       "role": "user",
-      "username": "begikas",
+      "username": "begikas1",
       "name": "Romualdas Jovaisa",
-      "password": "$2a$08$DH1DX4MXAbU.rCVmF/GVE.c7K/D54mCV4a36bvoni7.esNk0Z4IVW",
+      "password": "$2a$08$EbgAH11CzvFNt7t3aWPxmuVqDIbKg5cf4YHyYTsAFHZZLFm2efpJe",
       "email": "hello@one.lt",
       "description": "User did not provide any additional info about Himself/Herself",
       "avatar": "https://t3.ftcdn.net/jpg/05/42/05/88/360_F_542058884_WD10jTzyGGiMi40aPQjFYsZg3hXl5K7s.jpg",
@@ -75,8 +75,87 @@
   ],
   "posts": [
     {
+      "id": "d4ecae33-1c3b-4290-89e3-2987a302850a",
+      "timestamp": "Wed Feb 27 2024 12:08",
+      "authorId": "0",
+      "title": "Sania Fking Sorokin",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/img-1793-1619710024.jpg",
+      "post": "Alexandr Sania Sorokin broke a lot of world records in ultra long running, but what about trail running? do you think he would be as good there as some other runners? e.g. Killian Jornet?",
+      "category": [
+        "runners",
+        "miscellaneous"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "f24dc40d-6472-43d5-a021-ca423dbe0fde",
+      "timestamp": "Fri Mar 08 2024 18:12",
+      "authorId": "0",
+      "title": "What brand shoes do you wear on road races?!",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg",
+      "post": "What do you guys wear on road races, doesn't matter if it's a 5k or a full marathon? I personally love all of my Hokas, what about ya'll?",
+      "category": [
+        "shoes",
+        "races"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "6c18c76d-adc1-4a60-a337-de1efa16f7c5"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "747ec8b1-fc73-428c-8f43-36dd53edf2ec",
+      "timestamp": "Wed Mar 13 2024 10:18",
+      "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "title": "The G.O.A.T.",
+      "image": "https://www.goatfarming.in/wp-content/uploads/2023/06/Goat-Kids-Care-and-Management-2.jpg",
+      "post": "according to you, who is the goat? doesn't matter trail or road?",
+      "category": [
+        "runners"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+          "0"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "7ff9e67d-d5f7-4e62-a715-e298c9164b7e",
+      "timestamp": "Fri Mar 15 2024 13:01",
+      "authorId": "0",
+      "title": "Wahoo Elemnt watch",
+      "image": "https://cdn.road.cc/sites/default/files/styles/schema_org/public/2021-wahoo-elemnt-rival-multisport-watch.jpg",
+      "post": "So wahoo just decided to exit out of sports watch business. I'm wondering if that makes my watch almost unusable in the near future? what are you using as your main watch for training?",
+      "category": [
+        "gear",
+        "miscellaneous"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09"
+        ],
+        "minus": []
+      }
+    },
+    {
       "id": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
-      "timestamp": "Wed Mar 27 2024 12:44",
+      "timestamp": "Wed Mar 20 2024 12:44",
       "authorId": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
       "title": "Nesamoningas postas",
       "image": "https://hips.hearstapps.com/runnersworld-uk/i/16122/group_of_runners.jpg",
@@ -97,47 +176,8 @@
       }
     },
     {
-      "id": "f24dc40d-6472-43d5-a021-ca423dbe0fde",
-      "timestamp": "Thu Mar 28 2024 13:01",
-      "authorId": "0",
-      "title": "What brand shoes do you wear on road races?!",
-      "image": "https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg",
-      "post": "What do you guys wear on road races, doesn't matter if it's a 5k or a full marathon? I personally love all of my Hokas, what about ya'll?",
-      "category": [
-        "shoes",
-        "races"
-      ],
-      "edited": false,
-      "votes": {
-        "plus": [
-          "6c18c76d-adc1-4a60-a337-de1efa16f7c5"
-        ],
-        "minus": []
-      }
-    },
-    {
-      "id": "7ff9e67d-d5f7-4e62-a715-e298c9164b7e",
-      "timestamp": "Thu Mar 28 2024 13:05",
-      "authorId": "0",
-      "title": "Wahoo Elemnt watch",
-      "image": "https://cdn.road.cc/sites/default/files/styles/schema_org/public/2021-wahoo-elemnt-rival-multisport-watch.jpg",
-      "post": "So wahoo just decided to exit out of sports watch business. I'm wondering if that makes my watch almost unusable in the near future? what are you using as your main watch for training?",
-      "category": [
-        "gear",
-        "miscellaneous"
-      ],
-      "edited": false,
-      "votes": {
-        "plus": [
-          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
-          "9676ff8a-6e03-498d-b7a2-05a27b032e09"
-        ],
-        "minus": []
-      }
-    },
-    {
       "id": "3e8e47b0-2803-4b91-8616-732d89eb6144",
-      "timestamp": "Thu Mar 28 2024 13:06",
+      "timestamp": "Thu Mar 21 2024 21:06",
       "authorId": "0",
       "title": "Today is the last day!",
       "image": "",
@@ -155,28 +195,8 @@
       }
     },
     {
-      "id": "d4ecae33-1c3b-4290-89e3-2987a302850a",
-      "timestamp": "Thu Mar 28 2024 13:08",
-      "authorId": "0",
-      "title": "Sania Fking Sorokin",
-      "image": "https://hips.hearstapps.com/hmg-prod/images/img-1793-1619710024.jpg",
-      "post": "Alexandr Sania Sorokin broke a lot of world records in ultra long running, but what about trail running? do you think he would be as good there as some other runners? e.g. Killian Jornet?",
-      "category": [
-        "runners",
-        "miscellaneous"
-      ],
-      "edited": false,
-      "votes": {
-        "plus": [
-          "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
-          "9676ff8a-6e03-498d-b7a2-05a27b032e09"
-        ],
-        "minus": []
-      }
-    },
-    {
       "id": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
-      "timestamp": "Thu Mar 28 2024 13:17",
+      "timestamp": "Tue Mar 26 2024 15:17",
       "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "title": "About running routines...",
       "image": "",
@@ -187,26 +207,7 @@
       "edited": false,
       "votes": {
         "plus": [
-          "ea9e8770-0d3e-471f-afeb-df6bd68fb761"
-        ],
-        "minus": []
-      }
-    },
-    {
-      "id": "747ec8b1-fc73-428c-8f43-36dd53edf2ec",
-      "timestamp": "Thu Mar 28 2024 13:20",
-      "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
-      "title": "The G.O.A.T.",
-      "image": "https://www.goatfarming.in/wp-content/uploads/2023/06/Goat-Kids-Care-and-Management-2.jpg",
-      "post": "according to you, who is the goat? doesn't matter trail or road?",
-      "category": [
-        "runners"
-      ],
-      "edited": false,
-      "votes": {
-        "plus": [
           "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
-          "9676ff8a-6e03-498d-b7a2-05a27b032e09",
           "0"
         ],
         "minus": []
@@ -307,7 +308,9 @@
       "edited": false,
       "votes": {
         "plus": [],
-        "minus": []
+        "minus": [
+          "aab321ba-96ee-4920-9f3e-f92897e7bb83"
+        ]
       }
     },
     {
@@ -343,7 +346,9 @@
       "edited": false,
       "votes": {
         "plus": [],
-        "minus": []
+        "minus": [
+          "aab321ba-96ee-4920-9f3e-f92897e7bb83"
+        ]
       }
     },
     {
@@ -364,6 +369,18 @@
       "userId": "0",
       "timestamp": "Thu Mar 28 2024 13:32",
       "postId": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "id": "b6e233d0-200a-4c36-87f9-e30cad8074c3",
+      "text": "vat ka jauciau ta ir pasakiau",
+      "userId": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
+      "timestamp": "Thu Mar 28 2024 14:11",
+      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
       "edited": false,
       "votes": {
         "plus": [],

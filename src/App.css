@@ -31,7 +31,8 @@ section {
 
 .rating {
   display: flex;
-  flex-direction: row;
+  gap: 5px;
+  align-items: center;
   > .bi-hand-thumbs-up {
     color: green;
   }
@@ -39,6 +40,10 @@ section {
     color: red;
   }
   > .bi {
+    font-size: 1.5rem;
     cursor: pointer;
+    &:hover {
+      transform: scale(110%);
+    }
   }
 }

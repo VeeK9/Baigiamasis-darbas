@@ -84,9 +84,8 @@ const Login = () => {
       password: ""
     },
     onSubmit:(values) => {
-      // const loggingUser = users.find(user => user.username === values.username && bcrypt.compareSync(values.password, user.password));
-      const loggingUser = users.find(user => user.username === values.username && user.password === values.password);
-
+      const loggingUser = users.find(user => user.username === values.username && bcrypt.compareSync(values.password, user.password));
+      
       if(loggingUser){
         setCurrentUser(loggingUser);
         navigate('/');

@@ -9,16 +9,13 @@ const StyledSection = styled.section`
   background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 40px;
   align-items: center;
   > * {
     max-width: 950px;
   }
 
   > div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
     > div.roundSlider {
     position: relative;
     display: flex;

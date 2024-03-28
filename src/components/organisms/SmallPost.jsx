@@ -8,23 +8,38 @@ import CommentsContext from "../../contexts/CommentsContext";
 const StyledDiv = styled.div`
   background-color: white;
   border: 1px solid lightgray;
+  border-radius: 10px;
+  position: relative;
   display: grid;
-  grid-template-columns: ${props => props.$image ? '1fr 1fr 1fr 1fr' : '2fr 1fr 1fr'};
+  grid-template: repeat(3, 50px) / 1.5fr 2fr 2fr 1fr;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 150px;
   padding: 10px 30px;
   box-sizing: border-box;
-  > h3 {
-    justify-self: flex-start;
+
+  > h2 {
+    grid-area: 2 / 2 / 3 / 4;
+    text-align: center;
+    > a {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
+
   .userImg {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     border: 1px solid lightgray;
+    grid-row-start: span 3;
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    transform: translate(0, -30px);
   }
+
   > img {
     height: 130px;
     aspect-ratio: 3 / 1;
@@ -32,16 +47,45 @@ const StyledDiv = styled.div`
     border: 1px solid lightgray;
     border-radius: 10px;
   }
-  > div {
+  .author_date {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     > p {
-      margin: 0;
+      margin: 2px;
       > span {
         text-decoration: underline;
         font-weight: 700;
       }
+    }
+  }
+  .comments {
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    align-self: end;
+    > p {
+      margin: 0;
+    }
+    .bi {
+      font-size: 1.3rem;
+    }
+  }
+  .rating {
+    grid-area: 3 / 4 / -1 / -1;
+    place-self: end;
+  }
+  .categories {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: -20px;
+    right: 50px;
+    > div {
+      padding: 10px 20px;
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid lightgray;
     }
   }
 `
@@ -84,20 +128,31 @@ const SmallPost = ({post}) => {
 
   return (
     <StyledDiv $image={post.image}>
+      <div className="categories">
+        {
+          post.category.map(cat => <div>{cat}</div>)
+        }
+      </div>
       <img src={author?.avatar} alt={author?.username} className="userImg"/>
-      <h3>
+      <h2>
         <Link to={`/post/${post.id}`} onClick={() => setCurrentPost(post)}>
           {post.title}
         </Link>
-      </h3>
-      {/* {
-        post.image && <img src={post.image} alt="" />
-      } */}
-      <div>
-        <p>by: <span>{author?.username}</span></p>
+      </h2>
+      <div className="author_date">
+        <p>By: <span>{author?.username}</span></p>
         <p>{post.timestamp}</p>
       </div>
-      <div>{comments.filter(com => com.postId === post.id).length} comments</div>
+      <div className="comments">
+        {
+          comments.filter(com => com.postId === post.id).length ?
+          <>
+            <p>{comments.filter(com => com.postId === post.id).length} comments</p>
+            <span className="bi bi-chat-right-text"/>
+          </>
+          : <p>No comments</p>
+        }
+        </div>
       <div className="rating">
         <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
         <span>{rating}</span>
