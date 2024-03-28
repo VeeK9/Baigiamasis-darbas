@@ -72,6 +72,7 @@ const AddPost = () => {
         timestamp: Date().slice(0,21).toString(),
         authorId: currentUser.id,
         ...values,
+        edited: false,
         votes: {
           plus:[],
           minus:[]

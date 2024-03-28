@@ -23,19 +23,6 @@ const StyledDiv = styled.div`
     text-align: justify;
     margin: 0;
   }
-  .rating {
-    display: flex;
-    flex-direction: row;
-    > .bi {
-      cursor: pointer;
-    }
-    > .bi-hand-thumbs-up {
-      color: green;
-    }
-    > .bi-hand-thumbs-down {
-      color: red;
-    }
-  }
 `
 
 const Comment = ({comment, postId}) => {
@@ -47,9 +34,11 @@ const Comment = ({comment, postId}) => {
   const rating = comment.votes?.plus.length - comment.votes?.minus.length;
 
   const [isEditing, setIsEditing] = useState(false);
+
   const formik = useFormik({
     initialValues: {
-      ...comment
+      ...comment,
+      edited: true
     },
     validationSchema: Yup.object({
       text: Yup.string().trim()
@@ -119,7 +108,7 @@ const Comment = ({comment, postId}) => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            <input type="submit" value="Add Comment"/>
+            <input type="submit" value="Edit Comment"/>
             {
               formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>
             }

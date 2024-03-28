@@ -47,17 +47,17 @@
   ],
   "posts": [
     {
-      "id": "0",
-      "title": "Today we celebrate!",
-      "image": "",
+      "title": "Today we celebrate!asd",
       "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
-      "timestamp": "Mon May 22 2023 18:45",
+      "edited": true,
       "category": [
         "runners",
         "races"
       ],
+      "id": "0",
+      "image": "",
+      "timestamp": "Mon May 22 2023 18:45",
       "authorId": "0",
-      "edited": false,
       "votes": {
         "plus": [
           "0"
@@ -103,52 +103,92 @@
       }
     },
     {
+      "title": "naujas postas ciaasd",
+      "post": "kas cia per sudinas tekstas, nesuprantu?",
+      "edited": false,
+      "category": [
+        "gear"
+      ],
       "id": "37125585-13c9-4498-85b5-51e3bededeb7",
       "timestamp": "Wed Mar 27 2024 20:41",
       "authorId": "0",
-      "title": "asdasdasd",
       "image": "",
-      "post": "asdasdasdasdasd",
-      "category": [
-        "runners"
-      ],
-      "edited": false,
       "votes": {
         "plus": [
           "0"
         ],
         "minus": []
       }
+    },
+    {
+      "title": "naujas        postas",
+      "post": "naujas postas i races kategorija",
+      "edited": true,
+      "category": [
+        "races",
+        "gear",
+        "runners",
+        "shoes"
+      ],
+      "id": "32343e42-7fd0-41cc-999b-612adf8672c9",
+      "timestamp": "Thu Mar 28 2024 04:37",
+      "authorId": "0",
+      "image": "",
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "category": [
+        "miscellaneous",
+        "gear",
+        "races",
+        "shoes"
+      ],
+      "id": "5fd8c6b2-d3e3-492d-be81-096192cdc395",
+      "timestamp": "Thu Mar 28 2024 04:51",
+      "authorId": "0",
+      "title": "postukelis!123",
+      "image": "",
+      "post": "asdasdasdasdasdasd",
+      "edited": true,
+      "votes": {
+        "plus": [],
+        "minus": [
+          "0"
+        ]
+      }
     }
   ],
   "comments": [
     {
+      "text": "nenusisnekek",
+      "edited": true,
       "id": "6c480846-dda8-4570-9a1e-e2cee2aef98e",
-      "text": "safiwopejfpweqwefvebverfqwefwdfasdfwerawer",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
       "postId": "0",
-      "edited": false,
       "votes": {
         "plus": [],
         "minus": []
       }
     },
     {
+      "text": "kas cia per nesamone?",
+      "edited": true,
       "id": "6d2acd5f-2651-475a-9c9e-cbb0d866c5e3",
-      "text": "dsfgergsergserg",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
       "postId": "0",
-      "edited": false,
       "votes": {
         "plus": [],
         "minus": []
       }
     },
     {
-      "text": "12345678987654321",
-      "edited": false,
+      "text": "kas cia vyksta?",
+      "edited": true,
       "id": "e4d4afaa-73cf-45b0-b8ec-96b3ed6fb315",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
@@ -178,7 +218,9 @@
       "postId": "0",
       "edited": false,
       "votes": {
-        "plus": [],
+        "plus": [
+          "0"
+        ],
         "minus": []
       }
     },
@@ -190,13 +232,15 @@
       "postId": "0",
       "edited": false,
       "votes": {
-        "plus": [],
+        "plus": [
+          "0"
+        ],
         "minus": []
       }
     },
     {
-      "text": "hello hello",
       "edited": true,
+      "text": "alio blemba",
       "id": "939395cc-cde5-4525-88d1-6f829512595b",
       "userId": "0",
       "timestamp": "Thu Mar 28 2024 03:34",

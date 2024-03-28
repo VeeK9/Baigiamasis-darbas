@@ -7,7 +7,8 @@ export const PostsActionTypes = {
   GET_ALL: "fetches all posts on inital load",
   NEW_POST: "creates a new post",
   DELETE: "deletes a specific post",
-  VOTE: "Thumbs up/down on a specific post"
+  VOTE: "Thumbs up/down on a specific post",
+  EDIT: "Edit a specific post"
 }
 
 const reducer = (state, action) => {
@@ -27,10 +28,10 @@ const reducer = (state, action) => {
       
       case PostsActionTypes.DELETE:
         fetch(`http://localhost:8080/posts/${action.postId}`, {method: "DELETE"});
-        return state.filter(com => com.id !== action.postId);
+        return state.filter(post => post.id !== action.postId);
   
       case PostsActionTypes.VOTE:
-        const oldPost = state.find(com => com.id === action.data);
+        const oldPost = state.find(post => post.id === action.data);
         let newVotes
         if(action.vote === 'plus'){
           newVotes = {plus:[...oldPost.votes.plus, action.user], minus:oldPost.votes.minus.filter(minus => minus !== action.user)}
@@ -45,15 +46,31 @@ const reducer = (state, action) => {
           body: JSON.stringify({...oldPost, votes:newVotes})
         })
         
-        return state.map(com => {
-          if(com.id === action.data){
+        return state.map(post => {
+          if(post.id === action.data){
             return {
-              ...com,
+              ...post,
               votes: newVotes
             } 
           } else {
-            return com;
+            return post;
           }})
+
+    case PostsActionTypes.EDIT:
+      fetch(`http://localhost:8080/posts/${action.data.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type":"application/json"
+        },
+        body: JSON.stringify(action.data)
+      })
+      
+      return state.map(post => {
+        if(post.id === action.data.id){
+          return action.data
+        } else {
+          return post;
+        }})
       
     default:
       console.error(`No such action: ${action.type}`);

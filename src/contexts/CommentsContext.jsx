@@ -9,7 +9,7 @@ export const CommentsActionTypes = {
   NEW_COMMENT: "creates a new comment",
   DELETE: "deletes a specific comment",
   VOTE: "Thumbs up/down on a specific comment",
-  EDIT: "Edit a specific comment",
+  EDIT: "Edit a specific comment"
 }
 
 const reducer = (state, action) => {

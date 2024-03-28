@@ -44,19 +44,6 @@ const StyledDiv = styled.div`
       }
     }
   }
-  .rating {
-    display: flex;
-    flex-direction: row;
-    > .bi-hand-thumbs-up {
-      color: green;
-    }
-    > .bi-hand-thumbs-down {
-      color: red;
-    }
-    > .bi {
-      cursor: pointer;
-    }
-  }
 `
 
 const SmallPost = ({post}) => {

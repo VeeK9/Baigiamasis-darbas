@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
@@ -22,8 +22,6 @@ const StyledSection = styled.section`
   > .post {
     background-color: white;
     border: 1px solid lightgray;
-    /* display: grid;
-    grid-template-columns: ${props => props.$image ? '1fr 1fr 1fr' : '2fr 1fr'}; */
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -64,10 +62,39 @@ const OnePost = () => {
 
   const post = posts?.find(post => post.id === id);
   const author = users.find(user => user.id === post?.authorId);
+  const rating = post.votes?.plus.length - post.votes?.minus.length;
+
+  const [isEditing, setIsEditing] = useState(false);
 
   useEffect(()=>{
     setCurrentPostComments(comments.filter(com => com.postId === currentPost.id))
   },[currentPost, comments])
+  
+  const handleThumbsUp = () => {
+    if(currentUser){
+      if(post.votes.plus.every(vote => vote !== currentUser.id)){
+        setPosts({
+          type: PostsActionTypes.VOTE,
+          data: post.id,
+          user: currentUser.id,
+          vote: 'plus'
+        })
+      }
+    }
+  }
+  
+  const handleThumbsDown = () => {
+    if(currentUser){
+      if(post.votes.minus.every(vote => vote !== currentUser.id)){
+        setPosts({
+          type: PostsActionTypes.VOTE,
+          data: post.id,
+          user: currentUser.id,
+          vote: 'minus'
+        })
+      }
+    }
+  }
 
 
   const formik = useFormik({
@@ -100,12 +127,32 @@ const OnePost = () => {
     }
   })
 
-  const handleEditPost = () => {
-    setPosts({
-      type: PostsActionTypes.EDIT,
-      postId: post.id
-    })
-  }
+  const editFormik = useFormik({
+    initialValues: {
+      ...post,
+      edited: true,
+      category: ''
+    },
+    validationSchema: Yup.object({
+      title: Yup.string().trim().required('Please enter a title for your post'),
+      image: Yup.string().url('Must be a valid URL').trim(),
+      post: Yup.string().trim().required("what's the post about?"),
+      category: Yup.array().required('Must choose one'),
+    }),
+    onSubmit: values => {
+      console.log(values)
+      const editedPost = {
+        ...values,
+        edited: true
+      }
+      console.log(editedPost)
+      setPosts({
+        type: PostsActionTypes.EDIT,
+        data: editedPost
+      })
+      setIsEditing(false)
+    }
+  })
 
   const handleDeletePost = () => {
     setPosts({
@@ -120,12 +167,164 @@ const OnePost = () => {
       {
         posts.length && post ?
         <>
-          <div className="post">
-            <p>by: {author?.username}</p>
-            <h1>{post.title}</h1>
-            <p>{post.post}</p>
-            {post.image && <img src={post.image} alt="" />}
-          </div>
+          {
+            isEditing ?
+            // <form className="editingPost" onSubmit={editFormik.handleSubmit}>
+            //   <p>by: {author?.username}</p>
+            //   <input
+            //     type="text"
+            //     name="title" id="title"
+            //     placeholder={editFormik.values.title}
+            //     value={editFormik.values.title}
+            //     onChange={editFormik.handleChange}
+            //     onBlur={editFormik.handleBlur}
+            //   />
+            //   {editFormik.touched.title && editFormik.errors.title && <p>{editFormik.errors.title}</p>}
+            //   <textarea
+            //     name="post"
+            //     id="post"
+            //     placeholder={editFormik.values.post}
+            //     value={editFormik.values.post}
+            //     onChange={editFormik.handleChange}
+            //     onBlur={editFormik.handleBlur}
+            //   />
+            //   {editFormik.touched.title && editFormik.errors.title && <p>{editFormik.errors.title}</p>}
+            //   <input
+            //     type="url"
+            //     name="image" id="image"
+            //     placeholder={editFormik.values.image}
+            //     value={editFormik.values.image}
+            //     onChange={editFormik.handleChange}
+            //     onBlur={editFormik.handleBlur}
+            //   />
+            //   <input type="submit" value="Edit Post"/>
+            // </form>
+
+            <form onSubmit={editFormik.handleSubmit}>
+            <div>
+              <label htmlFor="title">Title:</label>
+              <input 
+                type="text"
+                name="title" id="title"
+                placeholder="Create your post title"
+                value={editFormik.values.title}
+                onBlur={editFormik.handleBlur}
+                onChange={editFormik.handleChange}
+              />
+            </div>
+              {editFormik.touched.title && editFormik.errors.title && <span>{editFormik.errors.title}</span>}
+            <div>
+              <label htmlFor="post">Your post:</label>
+              <textarea 
+                type="post"
+                name="post" id="post"
+                placeholder="Write whatever is on your mind."
+                value={editFormik.values.post}
+                onChange={editFormik.handleChange}
+                onBlur={editFormik.handleBlur}
+              />
+            </div>
+              {editFormik.touched.post && editFormik.errors.post && <span>{editFormik.errors.post}</span>}
+            <div>
+              <label>Select the category of your post:</label>
+              <div>
+                <label htmlFor="">Runners</label>
+                <input
+                    type="checkbox"
+                    name='category' 
+                    id='runners'
+                    value='runners'
+                    onChange={editFormik.handleChange}
+                  />
+              </div>
+              <div>
+                <label htmlFor="">Races</label>
+                <input
+                    type="checkbox"
+                    name='category' 
+                    id='races'
+                    value='races'
+                    onChange={editFormik.handleChange}
+                  />
+              </div>
+              <div>
+                <label htmlFor="">Shoes</label>
+                <input
+                    type="checkbox"
+                    name='category' 
+                    id='shoes'
+                    value='shoes'
+                    onChange={editFormik.handleChange}
+                  />
+              </div>
+              <div>
+                <label htmlFor="">Gear</label>
+                <input
+                    type="checkbox"
+                    name='category' 
+                    id='gear'
+                    value='gear'
+                    onChange={editFormik.handleChange}
+                  />
+              </div>
+              <div>
+                <label htmlFor="">Miscellaneous</label>
+                <input
+                    type="checkbox"
+                    name='category' 
+                    id='miscellaneous'
+                    value='miscellaneous'
+                    onChange={editFormik.handleChange}
+                  />
+              </div>
+              {editFormik.touched.category && editFormik.errors.category && <span>{editFormik.errors.category}</span>}
+            </div>
+            <div>
+              <label htmlFor="image">Photo:</label>
+              <input 
+                type="url"
+                name="image" id="image"
+                placeholder="Paste the URL of a photo you want to attach. "
+                value={editFormik.values.image}
+                onChange={editFormik.handleChange}
+                onBlur={editFormik.handleBlur}
+              />
+            </div>
+              {editFormik.touched.image && editFormik.errors.image && <span>{editFormik.errors.image}</span>}
+            <input type="submit" value="Post"/>
+          </form>
+
+
+            : <div className="post">
+              <p>by: {author?.username}</p>
+              <h1>{post.title}</h1>
+              <p>{post.post}</p>
+              {post.image && <img src={post.image} alt="" />}
+              {
+                currentUser.id === author.id &&
+                <div>
+                  <button
+                    className="editBtn"
+                    onClick={()=>setIsEditing(true)}
+                  >Edit</button>
+                  <button
+                    className="deleteBtn"
+                    onClick={() => handleDeletePost()}
+                  >Delete</button>
+                </div>
+              }
+              <div className="rating">
+                <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
+                <span>{rating}</span>
+                <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
+              </div>
+              {
+                post.edited &&
+                <i>Edited</i>
+              }
+            </div>
+
+          }
           <div className="addComment">
             {
               currentUser &&
@@ -155,19 +354,6 @@ const OnePost = () => {
               )
             }
           </div>
-          {
-            currentUser.id === author.id &&
-            <div>
-              <button
-                className="editBtn"
-                onClick={()=> handleEditPost()}
-              >Edit</button>
-              <button
-                className="deleteBtn"
-                onClick={() => handleDeletePost()}
-              >Delete</button>
-            </div>
-          }
         </>
         : null
       }
