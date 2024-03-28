@@ -1,0 +1,73 @@
+@import url("https://necolas.github.io/normalize.css/latest/normalize.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+body {
+  background-color: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'roboto';
+}
+
+section {
+  background-color: #f3f3f3;
+}
+
+.modal {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  > span {
+    font-size: 1.1rem;
+  }
+  > .bi-hand-thumbs-up-fill {
+    color: green;
+  }
+  > .bi-hand-thumbs-down-fill {
+    color: tomato;
+  }
+  > .bi {
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}
+
+.btns {
+  align-self: start;
+  justify-self: end;
+  display: flex;
+  gap: 15px;
+  z-index: 1;
+  > i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+  .bi-pencil-fill {
+    color: orange;
+  }
+  .bi-trash-fill {
+    color: tomato;
+  }
+}
