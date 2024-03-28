@@ -138,7 +138,7 @@
       "timestamp": "Fri Mar 15 2024 13:01",
       "authorId": "0",
       "title": "Wahoo Elemnt RIVAL watch",
-      "image": "https://cdn.road.cc/sites/default/files/styles/schema_org/public/2021-wahoo-elemnt-rival-multisport-watch.jpg",
+      "image": "https://www.mensjournal.com/.image/t_share/MjAyMDU1MDU0MTU1NDU3NzU4/runninggpswatch.jpg",
       "post": "So wahoo just decided to exit out of sports watch business. I'm wondering if that makes my watch almost unusable in the near future? what are you using as your main watch for training?",
       "category": [
         "gear",
@@ -184,7 +184,7 @@
       "category": [
         "races"
       ],
-      "edited": false,
+      "edited": true,
       "votes": {
         "plus": [
           "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
@@ -206,9 +206,25 @@
       "edited": false,
       "votes": {
         "plus": [
-          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
-          "0"
+          "0",
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761"
         ],
+        "minus": []
+      }
+    },
+    {
+      "id": "0f5aa78a-de62-4937-80b9-e228d555adb9",
+      "timestamp": "Thu Mar 28 2024 22:25",
+      "authorId": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+      "title": "labas rytas",
+      "image": "https://hips.hearstapps.com/runnersworld-uk/i/16122/group_of_runners.jpg",
+      "post": "helo helo helo",
+      "category": [
+        "runners"
+      ],
+      "edited": true,
+      "votes": {
+        "plus": [],
         "minus": []
       }
     }

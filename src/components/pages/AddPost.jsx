@@ -14,17 +14,19 @@ const StyledSection = styled.section`
     flex-direction: column;
     gap: 10px;
     margin: 0 auto;
+    transform: translateX(-40px);
     > div {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
       justify-content: flex-end;
       align-items: center;
       gap: 25px;
       text-align: end;
       > label {
-        width: 30%;
+        /* width: 20%; */
       }
       > input, textarea {
-        width: 80%;
+        grid-column-start: span 5;
         padding: 5px 10px;
         border: 1px solid lightgray;
         border-radius: 10px;
@@ -50,6 +52,9 @@ const StyledSection = styled.section`
   span {
     color: red;
     align-self: center;
+  }
+  > h1 {
+    text-align: center;
   }
 `
 
@@ -88,7 +93,7 @@ const AddPost = () => {
       title: Yup.string().trim().required('Please enter a title for your post'),
       image: Yup.string().url('Must be a valid URL').trim(),
       post: Yup.string().trim().required("what's the post about?"),
-      category: Yup.array().required('Must choose one'),
+      category: Yup.array().min(1, 'Must choose at least one'),
     })
   });
 
@@ -173,6 +178,7 @@ const AddPost = () => {
               />
           </div>
         </div>
+          {formik.touched.category && formik.errors.category && <span>{formik.errors.category}</span>}
         <div>
           <label htmlFor="image">Photo:</label>
           <input 

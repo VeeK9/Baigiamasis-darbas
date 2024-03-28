@@ -38,11 +38,14 @@ const StyledDiv = styled.div`
     margin: 0;
   }
   .commentText {
-    grid-column-start: span 2;
-    /* text-align: center; */
+    grid-area: 2 / 2 / 3 / -1;
+  }
+  .date {
+    grid-area: 3 / 2 / -1 / 3;
   }
   .rating{
     place-self: end;
+    grid-area: 3 / 4 / -1 / -1;
   }
   .btns {
     align-self: start;
@@ -197,7 +200,7 @@ const Comment = ({comment, postId}) => {
               </div>
             }
             <p className="commentText">{comment.text}</p>
-            <p>{comment.timestamp} 
+            <p className="date">{comment.timestamp} 
             {
               comment.edited &&
               <i> - Edited</i>

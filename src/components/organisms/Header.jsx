@@ -32,10 +32,10 @@ const StyledHeader = styled.header`
     position: absolute;
     top: 0;
     display: block;
+    width: max-content;
     >h1 {
       text-align: center;
       font-size: 2.2rem;
-      /* font-weight: 400; */
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
   }
@@ -120,17 +120,7 @@ const Header = () => {
       <div className="title"><h1>Stride Buddies</h1></div>
       <nav>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/posts/all' className='posts'>Posts
-        {/* <div>
-          <ul>
-            <li className="link" onClick={() => <Navigate to='runners'/>}>Runners</li>
-            <li className="link" onClick={() => navigate('races')}>Races</li>
-            <li className="link" onClick={() => navigate('/')}>Shoes</li>
-            <li className="link" onClick={() => navigate('/')}>Watches</li>
-            <li className="link" onClick={() => navigate('/')}>Random stuff</li>
-          </ul>
-        </div> */}
-        </NavLink>
+        <NavLink to='/posts/all' className='posts'>Posts</NavLink>
         <div>
           <ul>
             <li><Link to={'posts/runners'}>Runners</Link></li>
@@ -149,7 +139,7 @@ const Header = () => {
       {
         currentUser ? 
         <div className="userSide">
-          <Link onClick={() => navigate('/user')}>Settings <span className="bi bi-gear-wide-connected"/></Link>
+          {/* <Link onClick={() => navigate('/user')}>Settings <span className="bi bi-gear-wide-connected"/></Link> */}
           <Link onClick={() => setCurrentUser(false)}>Log out <span className="bi bi-box-arrow-right"/></Link>
         </div> :
         <div className="userBtns">

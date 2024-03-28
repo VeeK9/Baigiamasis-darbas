@@ -99,8 +99,8 @@ const StyledSection = styled.section`
     border-radius: 10px;
     position: relative;
     display: grid;
-    /* gap: 10px; */
-    grid-template: 80px 70px auto 50px / 1.5fr 2fr 2fr 1fr;
+    column-gap: 15px;
+    grid-template: 90px 80px auto 50px / 1.2fr 2fr 2fr 0.5fr;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -108,18 +108,84 @@ const StyledSection = styled.section`
     margin-top: 30px;
 
     > .postBody {
-      grid-area: 3 / 1 / 4 / -1;
-      text-align: center;
-      > img {
-        width: 90%;
-        border-radius: 10px;
-        margin-top: 10px;
+        grid-area: 3 / 1 / 4 / -1;
+        text-align: center;
+        > img {
+          width: 90%;
+          border-radius: 10px;
+          margin-top: 10px;
+        }
+        > p {
+          text-align: justify;
+          line-height: 1.5;
+          width: 90%;
+          margin: 20px auto;
+        }
       }
-      > p {
-        text-align: justify;
-        line-height: 1.5;
-        width: 90%;
-        margin: 20px auto;
+
+    > form {
+      grid-area: 1 / 1 / -1 / -1;
+      display: grid;
+      grid-template: 170px auto 50px / 1.2fr 4fr 0.5fr;
+      > .author_date {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        grid-area: 1 / 2 / 2 / 3;
+        > div > input {
+          margin-bottom: 10px;
+          font-size: 2rem;
+          width: 100%;
+          padding: 5px 10px;
+          border-radius: 10px;
+          border: 1px solid lightgray;
+        }
+      }
+      > .postBody {
+        grid-area: 2 / 1 / 3 / -1;
+        text-align: center;
+        margin-bottom: 30px;
+        > img {
+          width: 90%;
+          border-radius: 10px;
+          margin-top: 10px;
+        }
+        > div {
+          > textarea {
+            width: 90%;
+            resize: none;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            line-height: 1.5;
+            padding: 7px 10px;
+            height: 8lh;
+            margin-bottom: 30px;
+          }
+          > input {
+            width: 90%;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 7px 10px;
+          }
+        }
+      }
+      > .formBtns {
+        display: flex;
+        gap: 15px;
+        grid-area: 3 / 1 / 4 / -1;
+        justify-content: center;
+        > input {
+          padding: 10px 20px;
+          border: 1px solid lightgray;
+          border-radius: 10px;
+          background-color: white;
+          height: min-content;
+          transition: 200ms;
+          cursor: pointer;
+          &:hover {
+            background-color: lightgray;
+          }
+        }
       }
     }
 
@@ -128,7 +194,8 @@ const StyledSection = styled.section`
       height: 170px;
       border-radius: 50%;
       border: 1px solid lightgray;
-      grid-row-start: span 2;
+      grid-row-start: 1;
+      object-fit: cover;
       align-self: start;
       transform: translate(0, -30px);
     }
@@ -143,7 +210,7 @@ const StyledSection = styled.section`
     .author_date {
       display: flex;
       flex-direction: column;
-      grid-area: 1 / 2 / 3 / -1;
+      grid-area: 1 / 2 / 3 / 4;
       > h1 {
         margin-bottom: 10px;
       }
@@ -185,6 +252,10 @@ const StyledSection = styled.section`
         border: 1px solid lightgray;
       }
     }
+  }
+  .btns {
+    grid-area: 1 / 4 / 2 / -1;
+    align-self: center;
   }
 `
 
@@ -311,30 +382,70 @@ const OnePost = () => {
         <>
           {
             isEditing ?
-            <form onSubmit={editFormik.handleSubmit}>
-            <div>
-              <input 
-                type="text"
-                name="title" id="title"
-                placeholder="Create your post title"
-                value={editFormik.values.title}
-                onBlur={editFormik.handleBlur}
-                onChange={editFormik.handleChange}
-              />
+            <div className="post">
+              <div className="categories">
+                {post.category.map((cat, idx) => <div key={idx}>{cat}</div>)}
+              </div>
+              <form onSubmit={editFormik.handleSubmit}>
+              <img src={author?.avatar} alt={author?.username} className="userImg"/>
+              <div className="postBody">
+                <div>
+                  <textarea 
+                    type="text"
+                    name="post" id="post"
+                    placeholder={post.post}
+                    value={editFormik.values.post}
+                    onChange={editFormik.handleChange}
+                    onBlur={editFormik.handleBlur}
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="url"
+                    name="image" id="image"
+                    placeholder={post.image}
+                    value={editFormik.values.image}
+                    onChange={editFormik.handleChange}
+                    onBlur={editFormik.handleBlur}
+                  />
+                </div>
+                {
+                  post.image &&
+                  <img src={editFormik.values.image} alt={post.title} />
+                }
+              </div>
+              <div className="author_date">
+                <div>
+                  <input 
+                    type="text"
+                    name="title" id="title"
+                    placeholder={post.title}
+                    value={editFormik.values.title}
+                    onBlur={editFormik.handleBlur}
+                    onChange={editFormik.handleChange}
+                  />
+                </div>
+                <p>{post.timestamp}
+                  {post.edited && <i> - Edited</i>}
+                </p>
+                <p>By: <span>{author?.username}</span></p>
+              </div>
+              <div className="formBtns">
+                <input type="submit" value="Edit Post"/>
+                <input type="button" value="Cancel"
+                  onClick={()=> {
+                    setIsEditing(false);
+                    editFormik.resetForm();
+                  }}/>
+              </div>
+            {editFormik.touched.title && editFormik.errors.title && <span>{editFormik.errors.title}</span>}
+            {editFormik.touched.post && editFormik.errors.post && <span>{editFormik.errors.post}</span>}
+            {editFormik.touched.image && editFormik.errors.image && <span>{editFormik.errors.image}</span>}
+            </form>
             </div>
-              {editFormik.touched.title && editFormik.errors.title && <span>{editFormik.errors.title}</span>}
-            <div>
-              <textarea 
-                type="post"
-                name="post" id="post"
-                placeholder="Write whatever is on your mind."
-                value={editFormik.values.post}
-                onChange={editFormik.handleChange}
-                onBlur={editFormik.handleBlur}
-              />
-            </div>
-              {editFormik.touched.post && editFormik.errors.post && <span>{editFormik.errors.post}</span>}
-            {/* <div>
+            
+            
+            /* <div>
               <div>
                 <label htmlFor="">Runners</label>
                 <input
@@ -381,21 +492,7 @@ const OnePost = () => {
                   />
               </div>
               {editFormik.touched.category && editFormik.errors.category && <span>{editFormik.errors.category}</span>}
-            </div> */}
-            <div>
-              <input 
-                type="url"
-                name="image" id="image"
-                placeholder="Paste the URL of a photo you want to attach. "
-                value={editFormik.values.image}
-                onChange={editFormik.handleChange}
-                onBlur={editFormik.handleBlur}
-              />
-            </div>
-              {editFormik.touched.image && editFormik.errors.image && <span>{editFormik.errors.image}</span>}
-            <input type="submit" value="Post"/>
-            </form>
-
+            </div> */
 
             : 
             <div className="post">
@@ -410,6 +507,19 @@ const OnePost = () => {
                   <img src={post.image} alt={post.title} />
                 }
               </div>
+              {
+                currentUser.id === author.id &&
+                <div className="btns">
+                  <i
+                    className="bi bi-pencil-fill"
+                    onClick={()=>setIsEditing(true)}
+                  />
+                  <i
+                    className="bi bi-trash-fill"
+                    onClick={()=>handleDeletePost()}
+                  />
+                </div>
+              }
               <div className="author_date">
                 <h1>{post.title}</h1>
                 <p>{post.timestamp}
