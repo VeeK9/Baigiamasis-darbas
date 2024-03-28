@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PostsContext, {PostsActionTypes} from "../../contexts/PostsContext";
 import CommentsContext from "../../contexts/CommentsContext";
 
@@ -90,8 +90,7 @@ const SmallPost = ({post}) => {
 
   const {users, currentUser} = useContext(UsersContext);
   const {setCurrentPost, setPosts} = useContext(PostsContext);
-  const {comments, currentPostComments, setCurrentPostComments} = useContext(CommentsContext);
-  const navigate = useNavigate();
+  const {comments} = useContext(CommentsContext);
 
   const author = users.find(user => user.id === post.authorId)
   const rating = post.votes?.plus.length - post.votes?.minus.length;

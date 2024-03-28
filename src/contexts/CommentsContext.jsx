@@ -1,6 +1,4 @@
-import { createContext, useContext, useEffect, useReducer, useState } from "react";
-import UsersContext from "./UsersContext";
-import PostsContext from "./PostsContext";
+import { createContext, useEffect, useReducer, useState } from "react";
 
 const CommentsContext = createContext();
 
@@ -92,8 +90,6 @@ const CommentsProvider = ({children}) => {
 
   const [comments, setComments] = useReducer(reducer, []);
   const [currentPostComments, setCurrentPostComments] = useState([]);
-  const {currentUser} = useContext(UsersContext);
-  const {posts, currentPost} = useContext(PostsContext);
 
   useEffect(() => {
     fetch(`http://localhost:8080/comments`)

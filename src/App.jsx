@@ -12,7 +12,7 @@ import Header from './components/organisms/Header';
 import Login from './components/organisms/Login';
 import Register from './components/organisms/Register';
 import UserAside from './components/organisms/UserAside';
-import { Route, Routes, useNavigate, Navigate, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import { useContext } from 'react';
 import UsersContext from './contexts/UsersContext';
 import styled from 'styled-components';
@@ -41,7 +41,6 @@ width: ${props => props.$loggedIn ? 'calc(100vw - 300px)' : '100%'};
 const App = () => {
 
   const { currentUser } = useContext(UsersContext);
-  const navigate = useNavigate();
   const location = useLocation();
 
   return (
@@ -72,7 +71,7 @@ const App = () => {
             <Route path="posts" element={currentUser ? <UserPosts /> : <Navigate to='/login' />}/>
             <Route path="new_post" element={currentUser ? <AddPost /> : <Navigate to='/login' />} />
           </Route>
-          <Route path='' element={<ErrorPage />} />
+          <Route path='*' element={<ErrorPage />} />
         </Routes>
       </StyledSection>
       <Footer />

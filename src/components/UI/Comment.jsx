@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
-import UsersContext, { UsersActionTypes } from "../../contexts/UsersContext";
+import UsersContext from "../../contexts/UsersContext";
 import CommentsContext, {CommentsActionTypes} from "../../contexts/CommentsContext";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -93,7 +93,7 @@ const StyledDiv = styled.div`
 
 const Comment = ({comment, postId}) => {
 
-  const {users, currentUser, setUsers} = useContext(UsersContext);
+  const {users, currentUser} = useContext(UsersContext);
   const {setComments} = useContext(CommentsContext);
 
   const author = users.find(user => user.id === comment.userId);

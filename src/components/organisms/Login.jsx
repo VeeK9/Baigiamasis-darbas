@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { createPortal } from "react-dom";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import UsersContext from "../../contexts/UsersContext";
 import styled from "styled-components";
 import { useFormik } from "formik";

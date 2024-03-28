@@ -23,7 +23,6 @@ const StyledSection = styled.section`
       gap: 25px;
       text-align: end;
       > label {
-        /* width: 20%; */
       }
       > input, textarea {
         grid-column-start: span 5;

@@ -14,5 +14,5 @@ You have to have node.js & npm already installed
 4. Start the json server (it will create a server on a 8080 port) - npm run json 
 5. Open another terminal, navigate to the same directory and start the project (it will open a project on http://localhost:3000) - npm start
 
-#### See you on another side ( I mean see you in Employment Services office probably)
+### See you on another side ( I mean will see you in Employment Services office probably)
 

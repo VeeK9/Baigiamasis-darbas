@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../../media/logo.png";
-import { NavLink, Link, useNavigate, Navigate } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useContext } from "react";
 import UsersContext from "../../contexts/UsersContext";
 
@@ -110,7 +110,6 @@ const StyledHeader = styled.header`
 const Header = () => {
 
   const { currentUser, setCurrentUser } = useContext(UsersContext);
-  const navigate = useNavigate();
 
   return (
     <StyledHeader>
@@ -139,7 +138,6 @@ const Header = () => {
       {
         currentUser ? 
         <div className="userSide">
-          {/* <Link onClick={() => navigate('/user')}>Settings <span className="bi bi-gear-wide-connected"/></Link> */}
           <Link onClick={() => setCurrentUser(false)}>Log out <span className="bi bi-box-arrow-right"/></Link>
         </div> :
         <div className="userBtns">

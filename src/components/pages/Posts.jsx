@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import styled from "styled-components";
 import PostsContext from "../../contexts/PostsContext";
 import SmallPost from "../organisms/SmallPost";
-import { useLocation, useParams } from "react-router-dom";
 import CommentsContext from "../../contexts/CommentsContext";
 
 const StyledSection = styled.section`
@@ -176,15 +175,6 @@ const Posts = ({pathname}) => {
           )
         : <p>Nothing to see here...</p>
       }
-      {/* <div>
-        <select name="" id="">
-          <option value="">labas</option>
-          <option value="">labas</option>
-          <option value="">labas</option>
-          <option value="">labas</option>
-          <option value="">labas</option>
-        </select>
-      </div> */}
     </StyledSection>
   );
 }
