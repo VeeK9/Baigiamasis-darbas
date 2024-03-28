@@ -19,7 +19,7 @@ const StyledDiv = styled.div`
   box-sizing: border-box;
 
   > h2 {
-    grid-area: 2 / 2 / 3 / 4;
+    grid-area: 2 / 2 / 3 / -1;
     text-align: center;
     > a {
       color: black;

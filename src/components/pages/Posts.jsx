@@ -9,7 +9,7 @@ const StyledSection = styled.section`
   background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
   > * {
     max-width: 950px;

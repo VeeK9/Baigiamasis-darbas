@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const StyledDiv = styled.div`
   background-color: white;
   border: 1px solid lightgray;
+  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;

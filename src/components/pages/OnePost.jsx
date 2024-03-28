@@ -22,6 +22,7 @@ const StyledSection = styled.section`
   > .post {
     background-color: white;
     border: 1px solid lightgray;
+    border-radius: 10px;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -49,6 +50,12 @@ const StyledSection = styled.section`
         }
       }
     }
+  }
+  .comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 `
 

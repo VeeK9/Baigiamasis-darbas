@@ -18,7 +18,7 @@ const StyledSection = styled.section`
     display: block;
     margin: 0 auto;
     width: fit-content;
-    border-radius: 20px;
+    border-radius: 10px;
     aspect-ratio: 2.5 / 1;
     object-fit: cover;
   }
@@ -36,7 +36,7 @@ const StyledSection = styled.section`
 const Home = () => {
   return (
     <StyledSection>
-      <h1>Welcome to Stride Buddies!</h1>
+      <h1>Welcome to Stride Buddies Forum!</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum iusto ratione dolor quisquam eius similique velit, quaerat fuga ex alias rerum labore distinctio quos neque et laboriosam, doloribus nostrum tempora.
       </p>

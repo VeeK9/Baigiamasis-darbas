@@ -6,13 +6,26 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const StyledDiv = styled.div`
-  padding: 10px 20px;
+  padding: 15px;
   border: 1px solid lightgray;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  border-radius: 10px;
+  background-color: white;
+  display: grid;
+  grid-template: 1fr auto 1fr / auto 2fr 2fr;
+  gap: 15px;
+  width: 80%;
   align-items: center;
   position: relative;
+  > img {
+    grid-row-start: span 3;
+    place-self: start;
+    margin: 0 10px 10px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    object-fit: cover;
+  }
   > h4 {
     margin: 0;
     > span {
@@ -22,6 +35,17 @@ const StyledDiv = styled.div`
   > p {
     text-align: justify;
     margin: 0;
+  }
+  .commentText {
+    grid-column-start: span 2;
+    font-size: 1.2rem;
+  }
+  .btns {
+    align-self: start;
+    justify-self: end;
+  }
+  .rating{
+    place-self: end;
   }
 `
 
@@ -116,11 +140,11 @@ const Comment = ({comment, postId}) => {
         </>
           : users.length ?
           <>
-            <h4>Comment by <span>{author.username}</span>:</h4>
-            <p>{comment.text}</p>
+            <img src={author.avatar} alt={author.username} />
+            <h4>Comment by <span>{author.username}</span>: </h4>
             {
               currentUser.id === author.id &&
-              <div>
+              <div className="btns">
                 <button
                   className="editBtn"
                   onClick={()=>setIsEditing(true)}
@@ -131,16 +155,18 @@ const Comment = ({comment, postId}) => {
                 >Delete</button>
               </div>
             }
-            <p>{comment.timestamp}</p>
+            <p className="commentText">{comment.text}</p>
+            <p>{comment.timestamp} 
+            {
+              comment.edited &&
+              <i> - Edited</i>
+            }
+            </p>
             <div className="rating">
               <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
               <span>{rating}</span>
               <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
             </div>
-            {
-              comment.edited &&
-              <i>Edited</i>
-            }
           </> :
           null
       }

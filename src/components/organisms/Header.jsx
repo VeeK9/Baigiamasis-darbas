@@ -28,6 +28,17 @@ const StyledHeader = styled.header`
       margin: 0 auto;
     }
   }
+  .title {
+    position: absolute;
+    top: 0;
+    display: block;
+    >h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      /* font-weight: 400; */
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  }
   > nav {
     display: flex;
     justify-content: center;
@@ -106,6 +117,7 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="Stride buddies forum" />
       </div>
+      <div className="title"><h1>Stride Buddies</h1></div>
       <nav>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/posts/all' className='posts'>Posts

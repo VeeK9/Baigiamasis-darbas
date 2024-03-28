@@ -19,6 +19,7 @@ background-color: #f3f3f3;
   align-items: center;
   padding: 15px;
   border: 1px solid lightgray;
+  border-radius: 10px;
   text-align: center;
   > img {
     border-radius: 50%;

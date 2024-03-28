@@ -199,7 +199,7 @@
       "timestamp": "Tue Mar 26 2024 15:17",
       "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "title": "About running routines...",
-      "image": "",
+      "image": "https://www.nourishmovelove.com/wp-content/uploads/2021/07/RunningPlanWeek1-1024x325.jpg",
       "post": "When do you go out for a run? in the morning, or in the evening? maybe sneak in a few miles during your lunch? Also a question about a long run: saturday/sunday? pros/cons? thanks in advance",
       "category": [
         "miscellaneous"
@@ -364,12 +364,12 @@
       }
     },
     {
+      "text": "I love to run my long runs on sunday mornings. And regular runs every other day.",
+      "edited": true,
       "id": "820d4dbb-58e9-4476-9be5-9d298570cfde",
-      "text": "I love to run my long runs on sunday mornings. and regular runs every other day",
       "userId": "0",
       "timestamp": "Thu Mar 28 2024 13:32",
       "postId": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
-      "edited": false,
       "votes": {
         "plus": [],
         "minus": []
