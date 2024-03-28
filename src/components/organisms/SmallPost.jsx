@@ -126,6 +126,7 @@ const SmallPost = ({post}) => {
     <StyledDiv>
       <div className="categories">
         {
+          post.category &&
           post.category.map((cat, idx) => <div key={idx}>{cat}</div>)
         }
       </div>

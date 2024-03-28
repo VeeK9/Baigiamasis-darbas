@@ -19,39 +19,7 @@ const StyledSection = styled.section`
   > * {
     max-width: 950px;
   }
-  /* > .post {
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px 30px;
-    box-sizing: border-box;
-    > h3 {
-      justify-self: flex-start;
-    }
-    > img {
-      width: 100%;
-      aspect-ratio: 3 / 1;
-      object-fit: cover;
-      border: 1px solid lightgray;
-      border-radius: 10px;
-    }
-    > div {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      > p {
-        margin: 0;
-        > span {
-          text-decoration: underline;
-          font-weight: 700;
-        }
-      }
-    }
-  } */
-  
+
   .comments {
     display: flex;
     flex-direction: column;
@@ -186,6 +154,13 @@ const StyledSection = styled.section`
             background-color: lightgray;
           }
         }
+      }
+    }
+    > form + div {
+      grid-column-start: span 3;
+      > p {
+        text-align: center;
+        color: red;
       }
     }
 
@@ -343,8 +318,7 @@ const OnePost = () => {
     validationSchema: Yup.object({
       title: Yup.string().trim().required('Please enter a title for your post'),
       image: Yup.string().url('Must be a valid URL').trim(),
-      post: Yup.string().trim().required("what's the post about?"),
-      category: Yup.array().required('Must choose one'),
+      post: Yup.string().trim().required("What's the post about?")
     }),
     onSubmit: values => {
       console.log(values)
@@ -384,7 +358,7 @@ const OnePost = () => {
             isEditing ?
             <div className="post">
               <div className="categories">
-                {post.category.map((cat, idx) => <div key={idx}>{cat}</div>)}
+                {post.category.length>0 && post.category.map((cat, idx) => <div key={idx}>{cat}</div>)}
               </div>
               <form onSubmit={editFormik.handleSubmit}>
               <img src={author?.avatar} alt={author?.username} className="userImg"/>
@@ -438,66 +412,17 @@ const OnePost = () => {
                     editFormik.resetForm();
                   }}/>
               </div>
-            {editFormik.touched.title && editFormik.errors.title && <span>{editFormik.errors.title}</span>}
-            {editFormik.touched.post && editFormik.errors.post && <span>{editFormik.errors.post}</span>}
-            {editFormik.touched.image && editFormik.errors.image && <span>{editFormik.errors.image}</span>}
             </form>
+              <div>
+                {editFormik.touched.title && editFormik.errors.title && <p>{editFormik.errors.title}</p>}
+                {editFormik.touched.post && editFormik.errors.post && <p>{editFormik.errors.post}</p>}
+                {editFormik.touched.image && editFormik.errors.image && <p>{editFormik.errors.image}</p>}
+              </div>
             </div>
-            
-            
-            /* <div>
-              <div>
-                <label htmlFor="">Runners</label>
-                <input
-                    type="checkbox"
-                    name='category' 
-                    value='runners'
-                    onChange={editFormik.handleChange}
-                  />
-              </div>
-              <div>
-                <label htmlFor="">Races</label>
-                <input
-                    type="checkbox"
-                    name='category' 
-                    value='races'
-                    onChange={editFormik.handleChange}
-                  />
-              </div>
-              <div>
-                <label htmlFor="">Shoes</label>
-                <input
-                    type="checkbox"
-                    name='category' 
-                    value='shoes'
-                    onChange={editFormik.handleChange}
-                  />
-              </div>
-              <div>
-                <label htmlFor="">Gear</label>
-                <input
-                    type="checkbox"
-                    name='category' 
-                    value='gear'
-                    onChange={editFormik.handleChange}
-                  />
-              </div>
-              <div>
-                <label htmlFor="">Miscellaneous</label>
-                <input
-                    type="checkbox"
-                    name='category' 
-                    value='miscellaneous'
-                    onChange={editFormik.handleChange}
-                  />
-              </div>
-              {editFormik.touched.category && editFormik.errors.category && <span>{editFormik.errors.category}</span>}
-            </div> */
-
             : 
             <div className="post">
               <div className="categories">
-                {post.category.map((cat, idx) => <div key={idx}>{cat}</div>)}
+                {post.category.length>0 && post.category.map((cat, idx) => <div key={idx}>{cat}</div>)}
               </div>
               <img src={author?.avatar} alt={author?.username} className="userImg"/>
               <div className="postBody">

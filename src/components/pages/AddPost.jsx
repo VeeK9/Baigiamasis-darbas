@@ -92,7 +92,7 @@ const AddPost = () => {
     validationSchema: Yup.object({
       title: Yup.string().trim().required('Please enter a title for your post'),
       image: Yup.string().url('Must be a valid URL').trim(),
-      post: Yup.string().trim().required("what's the post about?"),
+      post: Yup.string().trim().required("What's the post about?"),
       category: Yup.array().min(1, 'Must choose at least one'),
     })
   });
