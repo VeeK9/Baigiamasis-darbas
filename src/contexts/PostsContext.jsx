@@ -5,7 +5,9 @@ const PostsContext = createContext();
 
 export const PostsActionTypes = {
   GET_ALL: "fetches all posts on inital load",
-  NEW_POST: "creates a new post"
+  NEW_POST: "creates a new post",
+  DELETE: "deletes a specific post",
+  VOTE: "Thumbs up/down on a specific post"
 }
 
 const reducer = (state, action) => {
@@ -22,6 +24,36 @@ const reducer = (state, action) => {
         body: JSON.stringify(action.data)
       })
       return [action.data, ...state];
+      
+      case PostsActionTypes.DELETE:
+        fetch(`http://localhost:8080/posts/${action.postId}`, {method: "DELETE"});
+        return state.filter(com => com.id !== action.postId);
+  
+      case PostsActionTypes.VOTE:
+        const oldPost = state.find(com => com.id === action.data);
+        let newVotes
+        if(action.vote === 'plus'){
+          newVotes = {plus:[...oldPost.votes.plus, action.user], minus:oldPost.votes.minus.filter(minus => minus !== action.user)}
+        } else if(action.vote === 'minus'){
+          newVotes = {plus:oldPost.votes.plus.filter(minus => minus !== action.user), minus:[...oldPost.votes.minus, action.user]}
+        }
+        fetch(`http://localhost:8080/posts/${action.data}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type":"application/json"
+          },
+          body: JSON.stringify({...oldPost, votes:newVotes})
+        })
+        
+        return state.map(com => {
+          if(com.id === action.data){
+            return {
+              ...com,
+              votes: newVotes
+            } 
+          } else {
+            return com;
+          }})
       
     default:
       console.error(`No such action: ${action.type}`);

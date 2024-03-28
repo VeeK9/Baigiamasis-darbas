@@ -113,7 +113,11 @@ const Register = () => {
           password: bcrypt.hashSync(values.password, 8),
           email: values.email,
           description: values.description ? values.description : "User did not provide any additional info about Himself/Herself",
-          avatar: values.avatar ? values.avatar : "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+          avatar: values.avatar ? values.avatar : "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png",
+          votes: {
+            posts:[],
+            comments:[]
+          }
         }
         setUsers({
           type: UsersActionTypes.NEW_USER,

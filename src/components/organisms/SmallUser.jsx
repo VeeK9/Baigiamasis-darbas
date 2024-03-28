@@ -24,6 +24,7 @@ const StyledDiv = styled.div`
     object-fit: cover;
     border: 1px solid lightgray;
     width: 60%;
+    cursor: pointer;
   }
 `
 

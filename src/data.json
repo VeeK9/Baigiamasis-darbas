@@ -4,11 +4,17 @@
       "id": "0",
       "role": "admin",
       "username": "admin",
-      "name": "Robert",
+      "name": "Annabelle",
       "password": "Hello1",
       "email": "admin@admin.com",
       "description": "admin of the stride buddies forum",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+      "avatar": "https://t3.ftcdn.net/jpg/06/15/59/88/360_F_615598844_BxbUfItLjm1yDdtpy5I5MXA0dAg1HzNX.jpg",
+      "votes": {
+        "posts": [
+          "0"
+        ],
+        "comments": []
+      }
     },
     {
       "id": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
@@ -18,7 +24,11 @@
       "password": "Slaptas1",
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png"
+      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png",
+      "votes": {
+        "posts": [],
+        "comments": []
+      }
     },
     {
       "id": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
@@ -28,7 +38,11 @@
       "password": "$2a$08$WBt5YDBvFEccx8WiSx19L.DGMIokmSd/TQS4NpphhlFGK9QSGmvTy",
       "email": "1@1",
       "description": "pradedantysis begikas is kursenu",
-      "avatar": "https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Running/Articles/Running+Mojo/Running+Mojo/happy+runner-carousel.jpg"
+      "avatar": "https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Running/Articles/Running+Mojo/Running+Mojo/happy+runner-carousel.jpg",
+      "votes": {
+        "posts": [],
+        "comments": []
+      }
     }
   ],
   "posts": [
@@ -43,7 +57,13 @@
         "races"
       ],
       "authorId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [
+          "0"
+        ],
+        "minus": []
+      }
     },
     {
       "id": "1",
@@ -56,20 +76,11 @@
         "watches"
       ],
       "authorId": "0",
-      "edited":false
-    },
-    {
-      "id": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
-      "timestamp": "Wed Mar 27 2024 12:31",
-      "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
-      "title": "pirmas",
-      "image": "https://cdn.sanity.io/images/eztzxh9q/production/2a9a480f3d31a159934d12af98378c4a9c617cbd-2121x1414.jpg?w=3840&q=75&fit=clip&auto=format",
-      "post": "as pirma karta rasau cia posta, kaip jum visiem sekasi?",
-      "category": [
-        "miscellaneous",
-        "runners"
-      ],
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
@@ -83,7 +94,13 @@
         "races",
         "shoes"
       ],
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": [
+          "0"
+        ]
+      }
     },
     {
       "id": "37125585-13c9-4498-85b5-51e3bededeb7",
@@ -95,45 +112,29 @@
       "category": [
         "runners"
       ],
-      "edited":false
-    },
-    {
-      "id": "1994295f-572e-4023-b193-f743779f2b8f",
-      "timestamp": "Wed Mar 27 2024 21:22",
-      "authorId": "0",
-      "title": "naujas postas",
-      "image": "",
-      "post": "visiskai naujas postas",
-      "category": [
-        "miscellaneous"
-      ],
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [
+          "0"
+        ],
+        "minus": []
+      }
     }
   ],
   "comments": [
-    {
-      "id": "a1f41211-8006-44f4-b2ed-5c207169c713",
-      "text": "cia pirmas postas?",
-      "userId": "0",
-      "timestamp": "Wed Mar 27 2024 21:21",
-      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
-      "edited":false
-    },
     {
       "id": "1cb1b138-29cf-4e3d-bf49-bf937e77cb3f",
       "text": "ar kazkelintas jau?",
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:21",
-      "postId": "53ef06c6-c070-4e35-8faf-5a0f077149c7",
-      "edited":false
-    },
-    {
-      "id": "c8ecaa46-b801-4bcf-a350-efcbb4e339d8",
-      "text": "asdasdqweqweqwe",
-      "userId": "0",
-      "timestamp": "Wed Mar 27 2024 21:22",
-      "postId": "1994295f-572e-4023-b193-f743779f2b8f",
-      "edited":false
+      "postId": null,
+      "edited": false,
+      "votes": {
+        "plus": [
+          "0"
+        ],
+        "minus": []
+      }
     },
     {
       "id": "6c480846-dda8-4570-9a1e-e2cee2aef98e",
@@ -141,7 +142,11 @@
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
       "postId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "6d2acd5f-2651-475a-9c9e-cbb0d866c5e3",
@@ -149,7 +154,11 @@
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
       "postId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "e4d4afaa-73cf-45b0-b8ec-96b3ed6fb315",
@@ -157,7 +166,11 @@
       "userId": "0",
       "timestamp": "Wed Mar 27 2024 21:23",
       "postId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "65dd630e-aad9-468d-95f7-859786ca263b",
@@ -165,7 +178,11 @@
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:25",
       "postId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "bf9ec2e6-bf05-4175-9701-76fb9cb196c1",
@@ -173,7 +190,11 @@
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:25",
       "postId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "576addf8-2568-49a7-ab4d-4fe33ae70151",
@@ -181,15 +202,53 @@
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:26",
       "postId": "0",
-      "edited":false
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     },
     {
       "id": "db3f1457-1208-4b49-8948-d1159c98da47",
       "text": "asdasdasdasd",
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
       "timestamp": "Wed Mar 27 2024 21:34",
-      "postId": "1994295f-572e-4023-b193-f743779f2b8f",
-      "edited":false
+      "postId": null,
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "9101cdda-e45f-4dbe-af03-6171b8f553d8",
+      "text": "asdoijqweqwdqwqe",
+      "userId": "0",
+      "timestamp": "Thu Mar 28 2024 00:02",
+      "postId": null,
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": [
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "f1ce5336-5047-42c2-8e01-a7e5211a819e",
+      "text": "kas cia blet per nesamone?!",
+      "userId": "0",
+      "timestamp": "Thu Mar 28 2024 00:10",
+      "postId": "37125585-13c9-4498-85b5-51e3bededeb7",
+      "edited": false,
+      "votes": {
+        "plus": [
+          "0"
+        ],
+        "minus": []
+      }
     }
   ]
 }

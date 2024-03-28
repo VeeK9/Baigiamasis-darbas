@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import UsersContext from "../../contexts/UsersContext";
-import PostsContext from "../../contexts/PostsContext";
+import PostsContext, {PostsActionTypes} from "../../contexts/PostsContext";
 import CommentsContext, { CommentsActionTypes } from "../../contexts/CommentsContext";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -58,9 +58,10 @@ const OnePost = () => {
 
   const { id } = useParams();
   const {currentUser, users} = useContext(UsersContext);
-  const {posts, currentPost} = useContext(PostsContext);
+  const {posts, currentPost, setPosts} = useContext(PostsContext);
   const {comments, setComments, currentPostComments, setCurrentPostComments} = useContext(CommentsContext);
-  
+  const navigate = useNavigate();
+
   const post = posts?.find(post => post.id === id);
   const author = users.find(user => user.id === post?.authorId);
 
@@ -85,7 +86,11 @@ const OnePost = () => {
         id: uuid(),
         userId: currentUser.id,
         timestamp: Date().slice(0,21).toString(),
-        postId: id
+        postId: id,
+        votes: {
+          plus:[],
+          minus:[]
+        }
       }
       setComments({
         type: CommentsActionTypes.NEW_COMMENT,
@@ -94,6 +99,22 @@ const OnePost = () => {
       formik.resetForm();
     }
   })
+
+  const handleEditPost = () => {
+    setPosts({
+      type: PostsActionTypes.EDIT,
+      postId: post.id
+    })
+  }
+
+  const handleDeletePost = () => {
+    setPosts({
+      type: PostsActionTypes.DELETE,
+      postId: post.id
+    })
+    navigate(-1);
+    
+  }
 
   return (
     <StyledSection>
@@ -135,6 +156,19 @@ const OnePost = () => {
               )
             }
           </div>
+          {
+            currentUser.id === author.id &&
+            <div>
+              <button
+                className="editBtn"
+                onClick={()=> handleEditPost()}
+              >Edit</button>
+              <button
+                className="deleteBtn"
+                onClick={() => handleDeletePost()}
+              >Delete</button>
+            </div>
+          }
         </>
         : null
       }

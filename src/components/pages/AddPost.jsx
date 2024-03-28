@@ -71,7 +71,11 @@ const AddPost = () => {
         id: uuid(),
         timestamp: Date().slice(0,21).toString(),
         authorId: currentUser.id,
-        ...values
+        ...values,
+        votes: {
+          plus:[],
+          minus:[]
+        }
       }
       setPosts({
         type: PostsActionTypes.NEW_POST,
