@@ -130,8 +130,7 @@ const OnePost = () => {
   const editFormik = useFormik({
     initialValues: {
       ...post,
-      edited: true,
-      category: ''
+      edited: true
     },
     validationSchema: Yup.object({
       title: Yup.string().trim().required('Please enter a title for your post'),
@@ -143,7 +142,8 @@ const OnePost = () => {
       console.log(values)
       const editedPost = {
         ...values,
-        edited: true
+        edited: true,
+        category: values.category
       }
       console.log(editedPost)
       setPosts({
@@ -151,6 +151,7 @@ const OnePost = () => {
         data: editedPost
       })
       setIsEditing(false)
+      editFormik.resetForm()
     }
   })
 
@@ -159,7 +160,7 @@ const OnePost = () => {
       type: PostsActionTypes.DELETE,
       postId: post.id
     })
-    navigate(-1);
+    navigate('/posts/all');
   }
 
   return (
@@ -169,40 +170,8 @@ const OnePost = () => {
         <>
           {
             isEditing ?
-            // <form className="editingPost" onSubmit={editFormik.handleSubmit}>
-            //   <p>by: {author?.username}</p>
-            //   <input
-            //     type="text"
-            //     name="title" id="title"
-            //     placeholder={editFormik.values.title}
-            //     value={editFormik.values.title}
-            //     onChange={editFormik.handleChange}
-            //     onBlur={editFormik.handleBlur}
-            //   />
-            //   {editFormik.touched.title && editFormik.errors.title && <p>{editFormik.errors.title}</p>}
-            //   <textarea
-            //     name="post"
-            //     id="post"
-            //     placeholder={editFormik.values.post}
-            //     value={editFormik.values.post}
-            //     onChange={editFormik.handleChange}
-            //     onBlur={editFormik.handleBlur}
-            //   />
-            //   {editFormik.touched.title && editFormik.errors.title && <p>{editFormik.errors.title}</p>}
-            //   <input
-            //     type="url"
-            //     name="image" id="image"
-            //     placeholder={editFormik.values.image}
-            //     value={editFormik.values.image}
-            //     onChange={editFormik.handleChange}
-            //     onBlur={editFormik.handleBlur}
-            //   />
-            //   <input type="submit" value="Edit Post"/>
-            // </form>
-
             <form onSubmit={editFormik.handleSubmit}>
             <div>
-              <label htmlFor="title">Title:</label>
               <input 
                 type="text"
                 name="title" id="title"
@@ -214,7 +183,6 @@ const OnePost = () => {
             </div>
               {editFormik.touched.title && editFormik.errors.title && <span>{editFormik.errors.title}</span>}
             <div>
-              <label htmlFor="post">Your post:</label>
               <textarea 
                 type="post"
                 name="post" id="post"
@@ -225,14 +193,12 @@ const OnePost = () => {
               />
             </div>
               {editFormik.touched.post && editFormik.errors.post && <span>{editFormik.errors.post}</span>}
-            <div>
-              <label>Select the category of your post:</label>
+            {/* <div>
               <div>
                 <label htmlFor="">Runners</label>
                 <input
                     type="checkbox"
                     name='category' 
-                    id='runners'
                     value='runners'
                     onChange={editFormik.handleChange}
                   />
@@ -242,7 +208,6 @@ const OnePost = () => {
                 <input
                     type="checkbox"
                     name='category' 
-                    id='races'
                     value='races'
                     onChange={editFormik.handleChange}
                   />
@@ -252,7 +217,6 @@ const OnePost = () => {
                 <input
                     type="checkbox"
                     name='category' 
-                    id='shoes'
                     value='shoes'
                     onChange={editFormik.handleChange}
                   />
@@ -262,7 +226,6 @@ const OnePost = () => {
                 <input
                     type="checkbox"
                     name='category' 
-                    id='gear'
                     value='gear'
                     onChange={editFormik.handleChange}
                   />
@@ -272,15 +235,13 @@ const OnePost = () => {
                 <input
                     type="checkbox"
                     name='category' 
-                    id='miscellaneous'
                     value='miscellaneous'
                     onChange={editFormik.handleChange}
                   />
               </div>
               {editFormik.touched.category && editFormik.errors.category && <span>{editFormik.errors.category}</span>}
-            </div>
+            </div> */}
             <div>
-              <label htmlFor="image">Photo:</label>
               <input 
                 type="url"
                 name="image" id="image"

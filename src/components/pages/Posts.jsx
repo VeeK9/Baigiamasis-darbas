@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 import PostsContext from "../../contexts/PostsContext";
 import SmallPost from "../organisms/SmallPost";
 import { useLocation, useParams } from "react-router-dom";
+import CommentsContext from "../../contexts/CommentsContext";
 
 const StyledSection = styled.section`
   background-color: #f3f3f3;
@@ -25,6 +26,7 @@ const StyledSection = styled.section`
     align-items: center;
     height: 34px;
     width: 60px;
+
     /* The slider */
     .slider {
       position: absolute;
@@ -75,38 +77,53 @@ const StyledSection = styled.section`
 const Posts = ({pathname}) => {
 
   const {posts} = useContext(PostsContext);
+  const {comments} = useContext(CommentsContext);
+  const [commentedPosts, setCommentedPosts] = useState(posts)
   
   let category;
   if(pathname){
     category = pathname.slice(7);
   }
 
+  const handleChange = (e) => {
+    if(e.target.checked){
+      // console.dir(posts.filter(post => comments.some(com => com.postId === post.id)))
+      setCommentedPosts(posts.filter(post => comments.some(com => com.postId === post.id)))
+    } else {
+      // console.dir(posts)
+      setCommentedPosts(posts)
+    }
+  }
+
   return (
     <StyledSection>
-      <h1>{category!=='all' ? category.slice(0,1).toUpperCase().concat(category.slice(1)) : 'All Posts'}</h1>
+      <h1>{category!=='all' ? 'Category: ' + category.slice(0,1).toUpperCase().concat(category.slice(1)) : 'All Posts'}</h1>
       <div>
-        <span>only show posts with comments:</span>
+        <span>Only show posts with comments:</span>
         <div className="roundSlider">
-          <label className="switch">
-            <input
-              type="checkbox" 
-              name="switch" id="switch"
-            />
-            <span className="slider round"></span>
-          </label>
+          <form>
+            <label className="switch">
+              <input
+                type="checkbox" 
+                name="switch" id="switch"
+                onClick={(e) => handleChange(e)}
+              />
+              <span className="slider round"></span>
+            </label>
+          </form>
         </div>
       </div>
       {
-        posts ?
+        commentedPosts ?
           category!=='all' ? 
-          posts.filter(post => 
+          commentedPosts.filter(post => 
             post.category.some(cat => 
               cat === category)).map(post => 
                 <SmallPost
                   key={post.id}
                   post={post} 
                 />)
-          : posts.map(post =>
+          : commentedPosts.map(post =>
             <SmallPost 
               key={post.id}
               post={post}
