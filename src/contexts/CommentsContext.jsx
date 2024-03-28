@@ -8,7 +8,8 @@ export const CommentsActionTypes = {
   GET_ALL: "fetches all comments on inital load",
   NEW_COMMENT: "creates a new comment",
   DELETE: "deletes a specific comment",
-  VOTE: "Thumbs up/down on a specific comment"
+  VOTE: "Thumbs up/down on a specific comment",
+  EDIT: "Edit a specific comment",
 }
 
 const reducer = (state, action) => {
@@ -52,6 +53,22 @@ const reducer = (state, action) => {
             ...com,
             votes: newVotes
           } 
+        } else {
+          return com;
+        }})
+
+    case CommentsActionTypes.EDIT:
+      fetch(`http://localhost:8080/comments/${action.comment.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type":"application/json"
+        },
+        body: JSON.stringify(action.comment)
+      })
+      
+      return state.map(com => {
+        if(com.id === action.comment.id){
+          return action.comment
         } else {
           return com;
         }})

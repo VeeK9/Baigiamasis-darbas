@@ -1,7 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 import UsersContext, { UsersActionTypes } from "../../contexts/UsersContext";
 import CommentsContext, {CommentsActionTypes} from "../../contexts/CommentsContext";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const StyledDiv = styled.div`
   padding: 10px 20px;
@@ -43,6 +45,31 @@ const Comment = ({comment, postId}) => {
 
   const author = users.find(user => user.id === comment.userId);
   const rating = comment.votes?.plus.length - comment.votes?.minus.length;
+
+  const [isEditing, setIsEditing] = useState(false);
+  const formik = useFormik({
+    initialValues: {
+      ...comment
+    },
+    validationSchema: Yup.object({
+      text: Yup.string().trim()
+        .min(8, 'Minimum length of 8 symbols')
+        .max(500, 'Maximum length of 500 symbols')
+        .required('This field is required')
+    }),
+    onSubmit: values => {
+      const editedComment = {
+        text: values.text,
+        edited: true,
+        ...values
+      }
+      setComments({
+        type: CommentsActionTypes.EDIT,
+        comment: editedComment
+      })
+      setIsEditing(false)
+    }
+  })
   
   const handleThumbsUp = () => {
     if(currentUser){
@@ -70,44 +97,63 @@ const Comment = ({comment, postId}) => {
     }
   }
 
+  const handleDeleteComment = () => {
+    setComments({
+      type: CommentsActionTypes.DELETE,
+      commentId: comment.id
+    })
+  }
+
   return (
     <StyledDiv>
       {
-        users.length ?
+        isEditing ?
         <>
           <h4>Comment by <span>{author.username}</span>:</h4>
-          <p>{comment.text}</p>
-          {
-            currentUser.id === author.id &&
-            <div>
-              <button
-                className="editBtn"
-                onClick={()=>setComments({
-                  type: CommentsActionTypes.EDIT,
-                  commentId: comment.id
-                })}
-              >Edit</button>
-              <button
-                className="deleteBtn"
-                onClick={()=>setComments({
-                  type: CommentsActionTypes.DELETE,
-                  commentId: comment.id
-                })}
-              >Delete</button>
+          <form onSubmit={formik.handleSubmit}>
+            <textarea
+              type="text"
+              name="text" id="text"
+              placeholder={comment.text}
+              value={formik.values.text}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            <input type="submit" value="Add Comment"/>
+            {
+              formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>
+            }
+          </form>
+        </>
+          : users.length ?
+          <>
+            <h4>Comment by <span>{author.username}</span>:</h4>
+            <p>{comment.text}</p>
+            {
+              currentUser.id === author.id &&
+              <div>
+                <button
+                  className="editBtn"
+                  onClick={()=>setIsEditing(true)}
+                >Edit</button>
+                <button
+                  className="deleteBtn"
+                  onClick={()=>handleDeleteComment()}
+                >Delete</button>
+              </div>
+            }
+            <p>{comment.timestamp}</p>
+            <div className="rating">
+              <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
+              <span>{rating}</span>
+              <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
             </div>
-          }
-          <p>{comment.timestamp}</p>
-          <div className="rating">
-            <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
-            <span>{rating}</span>
-            <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
-          </div>
-          {
-            comment.edited &&
-            <i>Edited</i>
-          }
-        </> :
-        null
+            {
+              comment.edited &&
+              <i>Edited</i>
+            }
+          </> :
+          null
       }
     </StyledDiv>
   );

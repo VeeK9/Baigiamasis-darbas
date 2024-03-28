@@ -113,7 +113,6 @@ const OnePost = () => {
       postId: post.id
     })
     navigate(-1);
-    
   }
 
   return (
