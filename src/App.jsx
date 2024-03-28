@@ -71,10 +71,8 @@ const App = () => {
           <Route path=':user'>
             <Route path="posts" element={currentUser ? <UserPosts /> : <Navigate to='/login' />}/>
             <Route path="new_post" element={currentUser ? <AddPost /> : <Navigate to='/login' />} />
-            {/* <Route path=':username' element={loggedInUser ? <UserPage /> : <Navigate to='/user/login' />} /> */}
-            {/* <Route path='admin' element={loggedInUser.role === 'admin' ? <Admin /> : <Navigate to='/user/login' />} /> */}
           </Route>
-          <Route path='*' element={<ErrorPage />} />
+          <Route path='' element={<ErrorPage />} />
         </Routes>
       </StyledSection>
       <Footer />

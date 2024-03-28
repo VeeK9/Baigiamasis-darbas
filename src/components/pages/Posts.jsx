@@ -100,7 +100,9 @@ const Posts = ({pathname}) => {
   const [sortedPosts, setSortedPosts] = useState(posts)
   
   let category;
-  if(pathname){
+  if(!pathname.slice(7)){
+    category = 'all'
+  } else {
     category = pathname.slice(7);
   }
 
