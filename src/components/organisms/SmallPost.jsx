@@ -16,7 +16,6 @@ const StyledDiv = styled.div`
   align-items: center;
   width: 100%;
   padding: 10px 30px;
-  box-sizing: border-box;
 
   > h2 {
     grid-area: 2 / 2 / 3 / -1;
@@ -34,9 +33,6 @@ const StyledDiv = styled.div`
     border-radius: 50%;
     border: 1px solid lightgray;
     grid-row-start: span 3;
-    /* position: relative;
-    top: 0;
-    left: 0; */
     transform: translate(0, -30px);
   }
 
@@ -127,10 +123,10 @@ const SmallPost = ({post}) => {
   }
 
   return (
-    <StyledDiv $image={post.image}>
+    <StyledDiv>
       <div className="categories">
         {
-          post.category.map(cat => <div>{cat}</div>)
+          post.category.map((cat, idx) => <div key={idx}>{cat}</div>)
         }
       </div>
       <img src={author?.avatar} alt={author?.username} className="userImg"/>
@@ -140,8 +136,13 @@ const SmallPost = ({post}) => {
         </Link>
       </h2>
       <div className="author_date">
+        <p>{post.timestamp}
+          {
+            post.edited &&
+            <i> - Edited</i>
+          }
+        </p>
         <p>By: <span>{author?.username}</span></p>
-        <p>{post.timestamp}</p>
       </div>
       <div className="comments">
         {
@@ -154,14 +155,10 @@ const SmallPost = ({post}) => {
         }
         </div>
       <div className="rating">
-        <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
+        <span className="bi bi-hand-thumbs-up-fill" onClick={() => handleThumbsUp()}></span>
         <span>{rating}</span>
-        <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
+        <span className="bi bi-hand-thumbs-down-fill" onClick={() => handleThumbsDown()}></span>
       </div>
-      {
-        post.edited &&
-        <i>Edited</i>
-      }
     </StyledDiv>
   );
 }

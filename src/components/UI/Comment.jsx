@@ -12,9 +12,10 @@ const StyledDiv = styled.div`
   background-color: white;
   display: grid;
   grid-template: 1fr auto 1fr / auto 2fr 2fr;
-  gap: 15px;
-  width: 80%;
+  gap: 10px;
+  row-gap: 20px;
   align-items: center;
+  width: 100%;
   position: relative;
   > img {
     grid-row-start: span 3;
@@ -38,14 +39,52 @@ const StyledDiv = styled.div`
   }
   .commentText {
     grid-column-start: span 2;
-    font-size: 1.2rem;
+    /* text-align: center; */
+  }
+  .rating{
+    place-self: end;
   }
   .btns {
     align-self: start;
     justify-self: end;
   }
-  .rating{
-    place-self: end;
+
+  .editForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    grid-area: 1 / 1 / -1 / -1;
+    > textarea {
+      width: 100%;
+      height: 5lh;
+      resize: none;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      padding: 7px 10px;
+    }
+    > div {
+      display: flex;
+      gap: 15px;
+      > input {
+        width: auto;
+        align-self: center;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 5px 20px;
+        background-color: white;
+        cursor: pointer;
+        transition: 200ms;
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+    }
+    > p {
+      margin: 0;
+      color: red;
+    }
   }
 `
 
@@ -121,9 +160,7 @@ const Comment = ({comment, postId}) => {
     <StyledDiv>
       {
         isEditing ?
-        <>
-          <h4>Comment by <span>{author.username}</span>:</h4>
-          <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} className="editForm">
             <textarea
               type="text"
               name="text" id="text"
@@ -132,12 +169,16 @@ const Comment = ({comment, postId}) => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
-            <input type="submit" value="Edit Comment"/>
-            {
-              formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>
-            }
-          </form>
-        </>
+            {formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>}
+            <div>
+              <input type="submit" value="Edit Comment"/>
+              <input type="button" value="Cancel"
+                onClick={() => {
+                  setIsEditing(false)
+                  formik.resetForm()  
+                }}/>
+            </div>
+        </form>
           : users.length ?
           <>
             <img src={author.avatar} alt={author.username} />
@@ -145,14 +186,14 @@ const Comment = ({comment, postId}) => {
             {
               currentUser.id === author.id &&
               <div className="btns">
-                <button
-                  className="editBtn"
+                <i
+                  className="bi bi-pencil-fill"
                   onClick={()=>setIsEditing(true)}
-                >Edit</button>
-                <button
-                  className="deleteBtn"
+                />
+                <i
+                  className="bi bi-trash-fill"
                   onClick={()=>handleDeleteComment()}
-                >Delete</button>
+                />
               </div>
             }
             <p className="commentText">{comment.text}</p>
@@ -163,9 +204,9 @@ const Comment = ({comment, postId}) => {
             }
             </p>
             <div className="rating">
-              <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
+              <span className="bi bi-hand-thumbs-up-fill" onClick={() => handleThumbsUp()}></span>
               <span>{rating}</span>
-              <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
+              <span className="bi bi-hand-thumbs-down-fill" onClick={() => handleThumbsDown()}></span>
             </div>
           </> :
           null

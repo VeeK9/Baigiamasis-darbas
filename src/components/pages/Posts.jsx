@@ -124,7 +124,7 @@ const Posts = ({pathname}) => {
               post={post}
             />
           )
-        : null
+        : <p>Nothing to see here...</p>
       }
       {/* <div>
         <select name="" id="">

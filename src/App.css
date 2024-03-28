@@ -33,11 +33,14 @@ section {
   display: flex;
   gap: 5px;
   align-items: center;
-  > .bi-hand-thumbs-up {
+  > span {
+    font-size: 1.1rem;
+  }
+  > .bi-hand-thumbs-up-fill {
     color: green;
   }
-  > .bi-hand-thumbs-down {
-    color: red;
+  > .bi-hand-thumbs-down-fill {
+    color: tomato;
   }
   > .bi {
     font-size: 1.5rem;
@@ -45,5 +48,25 @@ section {
     &:hover {
       transform: scale(110%);
     }
+  }
+}
+
+.btns {
+  align-self: start;
+  justify-self: end;
+  display: flex;
+  gap: 15px;
+  > i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+  .bi-pencil-fill {
+    color: orange;
+  }
+  .bi-trash-fill {
+    color: tomato;
   }
 }

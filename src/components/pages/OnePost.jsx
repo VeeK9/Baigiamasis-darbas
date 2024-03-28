@@ -19,7 +19,7 @@ const StyledSection = styled.section`
   > * {
     max-width: 950px;
   }
-  > .post {
+  /* > .post {
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 10px;
@@ -50,12 +50,141 @@ const StyledSection = styled.section`
         }
       }
     }
-  }
+  } */
+  
   .comments {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .addComment {
+    width: 100%;
+    > form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      > textarea {
+        height: 7lh;
+        resize: none;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 7px 10px;
+      }
+      > p {
+        text-align: center;
+        color: red;
+        margin: 0;
+      }
+      > input {
+        width: auto;
+        align-self: center;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 5px 20px;
+        background-color: white;
+        cursor: pointer;
+        transition: 200ms;
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+    }
+  }
+  .post {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    /* gap: 10px; */
+    grid-template: 80px 70px auto 50px / 1.5fr 2fr 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px 20px;
+    margin-top: 30px;
+
+    > .postBody {
+      grid-area: 3 / 1 / 4 / -1;
+      text-align: center;
+      > img {
+        width: 90%;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      > p {
+        text-align: justify;
+        line-height: 1.5;
+        width: 90%;
+        margin: 20px auto;
+      }
+    }
+
+    .userImg {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 1px solid lightgray;
+      grid-row-start: span 2;
+      align-self: start;
+      transform: translate(0, -30px);
+    }
+
+    > img {
+      height: 130px;
+      aspect-ratio: 3 / 1;
+      object-fit: cover;
+      border: 1px solid lightgray;
+      border-radius: 10px;
+    }
+    .author_date {
+      display: flex;
+      flex-direction: column;
+      grid-area: 1 / 2 / 3 / -1;
+      > h1 {
+        margin-bottom: 10px;
+      }
+      > p {
+        margin: 2px;
+        > span {
+          text-decoration: underline;
+          font-weight: 700;
+        }
+      }
+    }
+    .comments {
+      grid-area: 4 / 1 / -1 / 4;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 5px;
+      > p {
+        margin: 0;
+      }
+      .bi {
+        font-size: 1.3rem;
+      }
+    }
+    .rating {
+      grid-area: 3 / 4 / -1 / -1;
+      place-self: end;
+    }
+    .categories {
+      position: absolute;
+      display: flex;
+      gap: 20px;
+      top: -20px;
+      right: 50px;
+      > div {
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid lightgray;
+      }
+    }
   }
 `
 
@@ -265,38 +394,45 @@ const OnePost = () => {
             </div>
               {editFormik.touched.image && editFormik.errors.image && <span>{editFormik.errors.image}</span>}
             <input type="submit" value="Post"/>
-          </form>
+            </form>
 
 
-            : <div className="post">
-              <p>by: {author?.username}</p>
-              <h1>{post.title}</h1>
-              <p>{post.post}</p>
-              {post.image && <img src={post.image} alt="" />}
-              {
-                currentUser.id === author.id &&
-                <div>
-                  <button
-                    className="editBtn"
-                    onClick={()=>setIsEditing(true)}
-                  >Edit</button>
-                  <button
-                    className="deleteBtn"
-                    onClick={() => handleDeletePost()}
-                  >Delete</button>
-                </div>
-              }
-              <div className="rating">
-                <span className="bi bi-hand-thumbs-up" onClick={() => handleThumbsUp()}></span>
-                <span>{rating}</span>
-                <span className="bi bi-hand-thumbs-down" onClick={() => handleThumbsDown()}></span>
+            : 
+            <div className="post">
+              <div className="categories">
+                {post.category.map((cat, idx) => <div key={idx}>{cat}</div>)}
               </div>
-              {
-                post.edited &&
-                <i>Edited</i>
-              }
+              <img src={author?.avatar} alt={author?.username} className="userImg"/>
+              <div className="postBody">
+                <p>{post.post}</p>
+                {
+                  post.image &&
+                  <img src={post.image} alt={post.title} />
+                }
+              </div>
+              <div className="author_date">
+                <h1>{post.title}</h1>
+                <p>{post.timestamp}
+                  {post.edited && <i> - Edited</i>}
+                </p>
+                <p>By: <span>{author?.username}</span></p>
+              </div>
+              <div className="comments">
+                {
+                  comments.filter(com => com.postId === post.id).length ?
+                  <>
+                    <p>{comments.filter(com => com.postId === post.id).length} comments</p>
+                    <span className="bi bi-chat-right-text"/>
+                  </>
+                  : <p>No comments</p>
+                }
+              </div>
+              <div className="rating">
+                <span className="bi bi-hand-thumbs-up-fill" onClick={() => handleThumbsUp()}></span>
+                <span>{rating}</span>
+                <span className="bi bi-hand-thumbs-down-fill" onClick={() => handleThumbsDown()}></span>
+              </div>
             </div>
-
           }
           <div className="addComment">
             {
@@ -309,18 +445,16 @@ const OnePost = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 />
+                {formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>}
                 <input type="submit" value="Add Comment"/>
-                {
-                  formik.touched.text && formik.errors.text && <p>{formik.errors.text}</p>
-                }
               </form>
             }
           </div>
           <div className="comments">
             {
-              currentPostComments.map(comment => 
+              currentPostComments.map((comment, idx) => 
                 <Comment
-                  key={comment.id}
+                  key={idx}
                   comment={comment}
                   postId={post.id}
                 />

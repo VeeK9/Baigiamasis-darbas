@@ -34,7 +34,7 @@
       "id": "aab321ba-96ee-4920-9f3e-f92897e7bb83",
       "role": "user",
       "username": "romatri",
-      "name": "Romualda Trinkuniene",
+      "name": "Romanete Trinkuniene",
       "password": "$2a$08$r/XLhDLRAUZtev3q9OD4Zua4HaE1Cwnp7GONcVISqmOVvXuNNinFC",
       "email": "1@1",
       "description": "pradedantysis begikas is kursenu",
@@ -137,14 +137,14 @@
       "id": "7ff9e67d-d5f7-4e62-a715-e298c9164b7e",
       "timestamp": "Fri Mar 15 2024 13:01",
       "authorId": "0",
-      "title": "Wahoo Elemnt watch",
+      "title": "Wahoo Elemnt RIVAL watch",
       "image": "https://cdn.road.cc/sites/default/files/styles/schema_org/public/2021-wahoo-elemnt-rival-multisport-watch.jpg",
       "post": "So wahoo just decided to exit out of sports watch business. I'm wondering if that makes my watch almost unusable in the near future? what are you using as your main watch for training?",
       "category": [
         "gear",
         "miscellaneous"
       ],
-      "edited": false,
+      "edited": true,
       "votes": {
         "plus": [
           "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
@@ -167,11 +167,10 @@
       ],
       "edited": false,
       "votes": {
-        "plus": [
-          "0"
-        ],
+        "plus": [],
         "minus": [
-          "ea9e8770-0d3e-471f-afeb-df6bd68fb761"
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "0"
         ]
       }
     },
@@ -286,12 +285,12 @@
       }
     },
     {
+      "text": "I go hard everyday, 10k every morning, except tuesdays - I go for a physical on tuesdays.. :)",
+      "edited": true,
       "id": "ba441a41-1a52-46bb-adb3-a951bded5c74",
-      "text": "I go hard everyday, 10k every morning, except tuesdays - o go do a physical on tuesdays.. :)",
       "userId": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
       "timestamp": "Thu Mar 28 2024 13:25",
       "postId": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
-      "edited": false,
       "votes": {
         "plus": [
           "0"
