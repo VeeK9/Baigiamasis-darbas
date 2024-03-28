@@ -9,7 +9,8 @@ export const CommentsActionTypes = {
   NEW_COMMENT: "creates a new comment",
   DELETE: "deletes a specific comment",
   VOTE: "Thumbs up/down on a specific comment",
-  EDIT: "Edit a specific comment"
+  EDIT: "Edit a specific comment",
+  DELETE_POST: "deletes all comments associated with a specific post"
 }
 
 const reducer = (state, action) => {
@@ -72,6 +73,14 @@ const reducer = (state, action) => {
         } else {
           return com;
         }})
+
+    case CommentsActionTypes.DELETE_POST:
+      const deletedComments = state.filter(com => action.postId === com.postId)
+      deletedComments.forEach(com => {
+        fetch(`http://localhost:8080/comments/${com.id}`, {method: "DELETE"});
+      });
+
+      return state.filter(com => action.postId !== com.postId);
 
     default:
       console.error(`No such action: ${action.type}`);

@@ -87,10 +87,8 @@ const Posts = ({pathname}) => {
 
   const handleChange = (e) => {
     if(e.target.checked){
-      // console.dir(posts.filter(post => comments.some(com => com.postId === post.id)))
       setCommentedPosts(posts.filter(post => comments.some(com => com.postId === post.id)))
     } else {
-      // console.dir(posts)
       setCommentedPosts(posts)
     }
   }
@@ -131,6 +129,15 @@ const Posts = ({pathname}) => {
           )
         : null
       }
+      {/* <div>
+        <select name="" id="">
+          <option value="">labas</option>
+          <option value="">labas</option>
+          <option value="">labas</option>
+          <option value="">labas</option>
+          <option value="">labas</option>
+        </select>
+      </div> */}
     </StyledSection>
   );
 }

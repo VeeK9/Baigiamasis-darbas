@@ -114,6 +114,7 @@ const OnePost = () => {
         userId: currentUser.id,
         timestamp: Date().slice(0,21).toString(),
         postId: id,
+        edited: false,
         votes: {
           plus:[],
           minus:[]
@@ -156,6 +157,10 @@ const OnePost = () => {
   })
 
   const handleDeletePost = () => {
+    setComments({
+      type: CommentsActionTypes.DELETE_POST,
+      postId: post.id
+    })
     setPosts({
       type: PostsActionTypes.DELETE,
       postId: post.id

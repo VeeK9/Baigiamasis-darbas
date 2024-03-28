@@ -82,18 +82,64 @@
         ],
         "minus": []
       }
+    },
+    {
+      "id": "fd2b97a8-8a1f-4c98-a2f4-d9a680d41e21",
+      "timestamp": "Thu Mar 28 2024 11:51",
+      "authorId": "0",
+      "title": "asdasdasdasd123",
+      "image": "",
+      "post": "asdqweqwsaadsa",
+      "category": [
+        "runners"
+      ],
+      "edited": true,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
     }
   ],
   "comments": [
     {
+      "text": "asdasdasdasd",
+      "edited": true,
       "id": "218f1208-9223-4be6-b122-43ca3d54bca5",
-      "text": "alio alio",
       "userId": "0",
       "timestamp": "Thu Mar 28 2024 05:57",
-      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
+      "postId": "fd2b97a8-8a1f-4c98-a2f4-d9a680d41e21",
+      "votes": {
+        "plus": [
+          "0",
+          "6c18c76d-adc1-4a60-a337-de1efa16f7c5"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "04b08960-9563-4f3e-959a-91ab505edc49",
+      "edited": false,
+      "text": "asdasdasdasd",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Thu Mar 28 2024 11:54",
+      "postId": "1",
       "votes": {
         "plus": [],
         "minus": []
+      }
+    },
+    {
+      "id": "5a635ada-8470-4254-9ba5-2f4a024731c0",
+      "edited": false,
+      "text": "sdfsiufhwefjwoeifwef",
+      "userId": "0",
+      "timestamp": "Thu Mar 28 2024 11:58",
+      "postId": "1",
+      "votes": {
+        "plus": [],
+        "minus": [
+          "0"
+        ]
       }
     }
   ]
