@@ -113,7 +113,7 @@ const Register = () => {
           password: bcrypt.hashSync(values.password, 8),
           email: values.email,
           description: values.description ? values.description : "User did not provide any additional info about Himself/Herself",
-          avatar: values.avatar ? values.avatar : "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png",
+          avatar: values.avatar ? values.avatar : "https://le-cdn.hibuwebsites.com/96d6b0e88d554b9ebc4c0b534706829d/dms3rep/multi/opt/generic-profile-m-lg-396w.png",
           votes: {
             posts:[],
             comments:[]

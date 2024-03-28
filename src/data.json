@@ -24,7 +24,7 @@
       "password": "Slaptas1",
       "email": "a@a",
       "description": "User did not provide any additional info about Himself/Herself",
-      "avatar": "https://cdn.iconscout.com/icon/free/png-256/free-runner-3841050-3197118.png",
+      "avatar": "https://le-cdn.hibuwebsites.com/96d6b0e88d554b9ebc4c0b534706829d/dms3rep/multi/opt/generic-profile-m-lg-396w.png",
       "votes": {
         "posts": [],
         "comments": []
@@ -43,26 +43,37 @@
         "posts": [],
         "comments": []
       }
+    },
+    {
+      "id": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+      "role": "user",
+      "username": "begikas",
+      "name": "Romualdas Jovaisa",
+      "password": "$2a$08$DH1DX4MXAbU.rCVmF/GVE.c7K/D54mCV4a36bvoni7.esNk0Z4IVW",
+      "email": "hello@one.lt",
+      "description": "User did not provide any additional info about Himself/Herself",
+      "avatar": "https://t3.ftcdn.net/jpg/05/42/05/88/360_F_542058884_WD10jTzyGGiMi40aPQjFYsZg3hXl5K7s.jpg",
+      "votes": {
+        "posts": [],
+        "comments": []
+      }
+    },
+    {
+      "id": "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+      "role": "user",
+      "username": "begikas2",
+      "name": "Thomas Jefferson",
+      "password": "$2a$08$lcOK2hB1dUocJBXWvgFLCuq1bIaXF6C5ESE5Jc5ghuQ5vX9pyHTtm",
+      "email": "hello@one.lt",
+      "description": "Just a young guy, enjoying every run, every sunray hitting my face",
+      "avatar": "https://dy7glz37jgl0b.cloudfront.net/advice/images/323a89d42ce3632ebcf20e85bef3036e-man-crosses-arms-while-smiling-directly-at-the-camera_l.jpg",
+      "votes": {
+        "posts": [],
+        "comments": []
+      }
     }
   ],
   "posts": [
-    {
-      "id": "1",
-      "title": "Today we celebrate!",
-      "image": "https://bitpay.com/blog/content/images/2022/05/bitcoin-pizza-day.jpg",
-      "post": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sunt temporibus porro aspernatur. Eligendi nesciunt delectus, temporibus atque aut quidem veniam accusamus error quos optio? Cumque libero optio earum dolorum facilis doloribus nam incidunt animi laudantium, ipsam ratione nihil dicta fuga illo tenetur veritatis, maiores molestias inventore ad aut atque, dignissimos ea quas! Id laudantium aut incidunt, dicta assumenda tempore omnis doloremque eveniet ea quidem, placeat ex explicabo mollitia accusamus ipsam magnam soluta aperiam voluptates. Consequatur corrupti quasi atque magnam neque velit odio? Sapiente nemo esse voluptatum cum animi adipisci rem, mollitia veritatis beatae perferendis? Reprehenderit nobis officia, natus architecto eum, fugit possimus in ipsum voluptatum iste repudiandae nemo rerum sapiente accusamus aliquid at ratione quia magni omnis a numquam repellendus ipsam consequatur excepturi! Corporis, natus assumenda? Aut laboriosam obcaecati veniam iste mollitia voluptas omnis voluptate odio velit error nam voluptatibus culpa doloremque autem perferendis quo nulla, libero atque dolor.",
-      "timestamp": "Mon May 22 2023 18:45",
-      "category": [
-        "shoes",
-        "watches"
-      ],
-      "authorId": "0",
-      "edited": false,
-      "votes": {
-        "plus": [],
-        "minus": []
-      }
-    },
     {
       "id": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
       "timestamp": "Wed Mar 27 2024 12:44",
@@ -80,66 +91,283 @@
         "plus": [
           "0"
         ],
-        "minus": []
+        "minus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761"
+        ]
       }
     },
     {
-      "id": "fd2b97a8-8a1f-4c98-a2f4-d9a680d41e21",
-      "timestamp": "Thu Mar 28 2024 11:51",
+      "id": "f24dc40d-6472-43d5-a021-ca423dbe0fde",
+      "timestamp": "Thu Mar 28 2024 13:01",
       "authorId": "0",
-      "title": "asdasdasdasd123",
-      "image": "",
-      "post": "asdqweqwsaadsa",
+      "title": "What brand shoes do you wear on road races?!",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/hoka-zinal-13085-1643565794.jpg",
+      "post": "What do you guys wear on road races, doesn't matter if it's a 5k or a full marathon? I personally love all of my Hokas, what about ya'll?",
       "category": [
-        "runners"
+        "shoes",
+        "races"
       ],
-      "edited": true,
-      "votes": {
-        "plus": [],
-        "minus": []
-      }
-    }
-  ],
-  "comments": [
-    {
-      "text": "asdasdasdasd",
-      "edited": true,
-      "id": "218f1208-9223-4be6-b122-43ca3d54bca5",
-      "userId": "0",
-      "timestamp": "Thu Mar 28 2024 05:57",
-      "postId": "fd2b97a8-8a1f-4c98-a2f4-d9a680d41e21",
+      "edited": false,
       "votes": {
         "plus": [
-          "0",
           "6c18c76d-adc1-4a60-a337-de1efa16f7c5"
         ],
         "minus": []
       }
     },
     {
-      "id": "04b08960-9563-4f3e-959a-91ab505edc49",
+      "id": "7ff9e67d-d5f7-4e62-a715-e298c9164b7e",
+      "timestamp": "Thu Mar 28 2024 13:05",
+      "authorId": "0",
+      "title": "Wahoo Elemnt watch",
+      "image": "https://cdn.road.cc/sites/default/files/styles/schema_org/public/2021-wahoo-elemnt-rival-multisport-watch.jpg",
+      "post": "So wahoo just decided to exit out of sports watch business. I'm wondering if that makes my watch almost unusable in the near future? what are you using as your main watch for training?",
+      "category": [
+        "gear",
+        "miscellaneous"
+      ],
       "edited": false,
-      "text": "asdasdasdasd",
+      "votes": {
+        "plus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "3e8e47b0-2803-4b91-8616-732d89eb6144",
+      "timestamp": "Thu Mar 28 2024 13:06",
+      "authorId": "0",
+      "title": "Today is the last day!",
+      "image": "",
+      "post": "Hey you guys! today is the last day to get cheaper entries for vienna marathon 2024! i already got my bib, looking forward to running there!",
+      "category": [
+        "races"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "d4ecae33-1c3b-4290-89e3-2987a302850a",
+      "timestamp": "Thu Mar 28 2024 13:08",
+      "authorId": "0",
+      "title": "Sania Fking Sorokin",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/img-1793-1619710024.jpg",
+      "post": "Alexandr Sania Sorokin broke a lot of world records in ultra long running, but what about trail running? do you think he would be as good there as some other runners? e.g. Killian Jornet?",
+      "category": [
+        "runners",
+        "miscellaneous"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
+      "timestamp": "Thu Mar 28 2024 13:17",
+      "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "title": "About running routines...",
+      "image": "",
+      "post": "When do you go out for a run? in the morning, or in the evening? maybe sneak in a few miles during your lunch? Also a question about a long run: saturday/sunday? pros/cons? thanks in advance",
+      "category": [
+        "miscellaneous"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "747ec8b1-fc73-428c-8f43-36dd53edf2ec",
+      "timestamp": "Thu Mar 28 2024 13:20",
+      "authorId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "title": "The G.O.A.T.",
+      "image": "https://www.goatfarming.in/wp-content/uploads/2023/06/Goat-Kids-Care-and-Management-2.jpg",
+      "post": "according to you, who is the goat? doesn't matter trail or road?",
+      "category": [
+        "runners"
+      ],
+      "edited": false,
+      "votes": {
+        "plus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+          "0"
+        ],
+        "minus": []
+      }
+    }
+  ],
+  "comments": [
+    {
+      "text": "oh, I love saucony guide line, but i heard a lot of awesome thing about Hoka! P.S. edited cause typos",
+      "edited": true,
+      "id": "6c98a19a-3cba-4ba9-a2de-a320ffb1fa0e",
       "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
-      "timestamp": "Thu Mar 28 2024 11:54",
-      "postId": "1",
+      "timestamp": "Thu Mar 28 2024 13:09",
+      "postId": "f24dc40d-6472-43d5-a021-ca423dbe0fde",
       "votes": {
         "plus": [],
         "minus": []
       }
     },
     {
-      "id": "5a635ada-8470-4254-9ba5-2f4a024731c0",
+      "id": "2805b2b3-9c89-4e73-b2be-14cb96d17113",
+      "text": "well, even from the start I didn't like the watch. I use a real runners watch - garmin fr 965! Love it!",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Thu Mar 28 2024 13:11",
+      "postId": "7ff9e67d-d5f7-4e62-a715-e298c9164b7e",
       "edited": false,
-      "text": "sdfsiufhwefjwoeifwef",
-      "userId": "0",
-      "timestamp": "Thu Mar 28 2024 11:58",
-      "postId": "1",
       "votes": {
         "plus": [],
         "minus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09",
           "0"
         ]
+      }
+    },
+    {
+      "id": "48957945-b3bc-4b83-a690-23c4a26a3fb9",
+      "text": "Some questions should never be answered! (devils laugh)",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Thu Mar 28 2024 13:13",
+      "postId": "d4ecae33-1c3b-4290-89e3-2987a302850a",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "id": "2bbd007e-478d-4afb-aea1-8c6b6bc51853",
+      "text": "for me personally: I think Killian is the goat!",
+      "userId": "6c18c76d-adc1-4a60-a337-de1efa16f7c5",
+      "timestamp": "Thu Mar 28 2024 13:21",
+      "postId": "747ec8b1-fc73-428c-8f43-36dd53edf2ec",
+      "edited": false,
+      "votes": {
+        "plus": [
+          "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+          "0"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "b6eb3443-4b0a-4559-8b69-c4ad15342894",
+      "text": "Yiannis Kouros FTW!",
+      "userId": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+      "timestamp": "Thu Mar 28 2024 13:24",
+      "postId": "747ec8b1-fc73-428c-8f43-36dd53edf2ec",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": [
+          "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+          "0"
+        ]
+      }
+    },
+    {
+      "id": "ba441a41-1a52-46bb-adb3-a951bded5c74",
+      "text": "I go hard everyday, 10k every morning, except tuesdays - o go do a physical on tuesdays.. :)",
+      "userId": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+      "timestamp": "Thu Mar 28 2024 13:25",
+      "postId": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
+      "edited": false,
+      "votes": {
+        "plus": [
+          "0"
+        ],
+        "minus": []
+      }
+    },
+    {
+      "id": "5ef2d0bb-fa5c-472f-b015-6b12c56b3f2b",
+      "text": "kas cia per briedas?!",
+      "userId": "ea9e8770-0d3e-471f-afeb-df6bd68fb761",
+      "timestamp": "Thu Mar 28 2024 13:26",
+      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "id": "bde116fe-813d-46d9-95b4-1aee1e0bb031",
+      "text": "Francois D'Haene everyday.",
+      "userId": "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+      "timestamp": "Thu Mar 28 2024 13:28",
+      "postId": "747ec8b1-fc73-428c-8f43-36dd53edf2ec",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "id": "a6997a70-8f7c-4e4e-afce-eaf485f0138c",
+      "text": "I like this guy!",
+      "userId": "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+      "timestamp": "Thu Mar 28 2024 13:29",
+      "postId": "d4ecae33-1c3b-4290-89e3-2987a302850a",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "id": "fe11b2af-be1e-49ab-867a-a7a9fca5d4b3",
+      "text": "kazkokia nesamone parasyta",
+      "userId": "9676ff8a-6e03-498d-b7a2-05a27b032e09",
+      "timestamp": "Thu Mar 28 2024 13:29",
+      "postId": "2b028eb8-db9b-4a77-8162-541f5ba447e7",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "text": "we should pitch him to run against Gediminas Grinius. do it in UTMB or smth :D",
+      "edited": true,
+      "id": "07c358c8-d448-4a61-b276-0403711cd976",
+      "userId": "0",
+      "timestamp": "Thu Mar 28 2024 13:31",
+      "postId": "d4ecae33-1c3b-4290-89e3-2987a302850a",
+      "votes": {
+        "plus": [],
+        "minus": []
+      }
+    },
+    {
+      "id": "820d4dbb-58e9-4476-9be5-9d298570cfde",
+      "text": "I love to run my long runs on sunday mornings. and regular runs every other day",
+      "userId": "0",
+      "timestamp": "Thu Mar 28 2024 13:32",
+      "postId": "5d13a6a5-8f37-4d49-b586-ec206d97013d",
+      "edited": false,
+      "votes": {
+        "plus": [],
+        "minus": []
       }
     }
   ]
